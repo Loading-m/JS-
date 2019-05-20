@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function valid(str) {
+  let stack = [];
+  let paren_map = {')': '(', ']': '[', '}': '{'};
+  for (let i = 0, len = str.length; i < len; i++) {
+    let tmpStr = str.charAt(i);
+    if (!(tmpStr in paren_map)) {
+      stack.push(tmpStr);
+    } else if (stack.length !== 0 && paren_map[tmpStr] !== stack.pop()) {
+      return false;
+    }
+  }
+  console.log(stack);
+  return stack.length === 0;
+}
+
+let isValid = valid("(())");//true
+console.log(isValid);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包1</title>
+</head>
+<body>
+<script>
+    for (var i = 0; i <= 5; i++) {
+        (function(j) {
+            setTimeout(function timer() {
+                console.log(j)
+            })
+        })(i)
+    }
+</script>
+</body>
+</html>

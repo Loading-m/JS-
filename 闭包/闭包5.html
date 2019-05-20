@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包1</title>
+</head>
+<body>
+<script>
+    var flag = "window";
+    var obj={
+        name:'flg',
+        sayFlag: function(){
+            alert('hehe');
+        }
+    }
+    var object = {
+        flag : "local",
+        name:'flg',
+        sayFlag: function(){
+            alert(this.flag);
+        }
+    }
+    object.sayFlag.call(obj);//
+</script>
+</body>
+</html>

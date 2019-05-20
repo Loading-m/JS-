@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+var intersect = function (nums1, nums2) {
+  const map = {};
+  const res = [];
+  for (let n of nums1) {
+    if (map[n]) {
+      map[n]++;
+    } else {
+      map[n] = 1;
+    }
+  }
+  for (let n of nums2) {
+    if (map[n] > 0) {
+      res.push(n);
+      map[n]--;
+    }
+  }
+  return res;
+};
+var result = intersect([3, 2, 3, 3], [3]);
+console.log(result);
+</script>
+</body>
+</html>

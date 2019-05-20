@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包1</title>
+</head>
+<body>
+<script>
+    for (let i = 9; i < 7; i--) {
+        setTimeout(function () {
+            console.log(i)
+        },400)
+    }
+
+    //setTimeout如果不设置时间，那么他最少等待4毫秒
+    //setTimeout是宏任务 setInterval它也是宏任务
+    //宏任务和微任务谁先执行？微任务先执行
+    //根据js运行机制:
+    //*首先执行同步代码块，等待所有同步代码块执行完毕后再执行异步代码块
+    //for循环时是同步的，setTimeout是异步的
+    //那么该代码会先执行完for循环再执行setTimeout
+    //js中任务栈分为同步任务栈和异步任务栈（栈就是存放变量，方法的地方（方法栈））
+    //6个6
+</script>
+</body>
+</html>

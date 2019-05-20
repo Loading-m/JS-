@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let flatArr = [
+  {id: 1, title: "解忧杂货铺1", pid: 0},
+  {id: 2, title: '解忧杂货铺2', pid: 0},
+  {id: 3, title: '解忧杂货铺2-1', pid: 2},
+  {id: 4, title: '解忧杂货铺3-1', pid: 3},
+  {id: 5, title: '解忧杂货铺4-1', pid: 4},
+  {id: 6, title: '解忧杂货铺4-2', pid: 2},
+];
+
+/*遍历所有 如果遇到id有和形参的pid相等的，那么就说明当前遍历的被某个id包括。就把当前的放到他的下面，并且删除*/
+function fn(data, pid) {
+  let result = [], temp;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].pid === pid) {//如果当前遍历到的pid和设置的pid相等
+      let obj = {"title": data[i].title,"pid": data[i].pid,"id": data[i].id};  //就把遍历到的存起来
+      temp = fn(data, data[i].id);
+      if (temp.length > 0) {
+        obj.children = temp;
+      }
+      result.push(obj);
+    }
+  }
+  return result;
+}
+let returnTree = fn(flatArr,0);
+console.log(returnTree);
+/*
+output:
+[
+{id: 1, title: '解忧杂货铺1', pid: 0},
+  {
+    id: 2, title: '解忧杂货铺2', pid: 0, children: [
+      {id: 6, title: '解忧杂货铺4-2', pid: 2},
+      {
+        id: 3, title: '解忧杂货铺2-1', pid: 2, children: [
+          {
+            id: 4, title: '解忧杂货铺3-1', pid: 3, children: [
+              {id: 5, title: '解忧杂货铺4-1', pid: 4},
+            ]
+          },
+        ]
+      },
+    ]
+  }
+];*/
+</script>
+</body>
+</html>

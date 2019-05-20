@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>柯里化</title>
+</head>
+<body>
+<script>
+    //闭包:可以保留参数，可以保留作用域
+    function add() {
+        var args = Array.prototype.slice.call(arguments);
+
+        function adder() {
+            args.push(...arguments)
+            return adder
+        }
+
+        adder.toString = function () {
+            var total = 0;
+            for (let i = 0; i < args.length; i++) {
+                total += arguments[i];
+            }
+            return total + ''
+        }
+        return adder
+    }
+
+    var result = add(1)(2)(3)
+    console.log(result)
+</script>
+<!--
+1.使用最外层的函数去接受第一个参数,第二,在第一个函数内部创建闭包函数,使其能循环接收剩余参数,在第二个函数中(也就是闭包函数),将第一个和第二个函数的参数合并
+3.重写第二个函数的tostring 使其返回所有参数相加的总和
+
+-->
+</body>
+</html>

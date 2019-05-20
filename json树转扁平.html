@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let JsonTree = [
+  {id: 1, title: '解忧杂货铺1', pid: 0},
+  {
+    id: 2, title: '解忧杂货铺2', pid: 0, children: [
+      {id: 6, title: '解忧杂货铺4-2', pid: 2},
+      {
+        id: 3, title: '解忧杂货铺2-1', pid: 2, children: [
+          {
+            id: 4, title: '解忧杂货铺3-1', pid: 3, children: [
+              {id: 5, title: '解忧杂货铺4-1', pid: 4},
+            ]
+          },
+        ]
+      },
+    ]
+  }
+];
+function flatten(data) {
+  return data.reduce((arr, {id, title, pid, children = []}) =>
+    arr.concat([{id, title, pid}], flatten(children)), []);
+}
+
+let flatten1 = flatten(JsonTree);
+console.log(flatten1)
+
+/*
+output:
+[
+  {id: 1, title: '解忧杂货铺1', pid: 0},
+  {id: 2, title: '解忧杂货铺2', pid: 0},
+  {id: 3, title: '解忧杂货铺2-1', pid: 2},
+  {id: 4, title: '解忧杂货铺3-1', pid: 3},
+  {id: 5, title: '解忧杂货铺4-1', pid: 4},
+  {id: 6, title: '解忧杂货铺4-2', pid: 2},
+]
+*/
+</script>
+</body>
+</html>
