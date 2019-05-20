@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <title>数组方法的使用</title>
+</head>
+<body>
+<script>
+let arr = [56, 8, 9, 16, 1, 1];
+
+function unique(array) {
+  let res = [];
+  for (let i = 0, len = array.length; i < len; i++) {
+    let current = array[i];
+    if (res.indexOf(current) === -1) {
+      res.push(current);
+    }
+  }
+  return res;
+}
+
+console.log(unique(arr));
+</script>
+</body>
+</html>

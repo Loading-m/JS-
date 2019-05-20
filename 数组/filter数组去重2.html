@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <title>数组方法的使用</title>
+</head>
+<body>
+<script>
+let arr = [56, 8, 9, 16, 1, 1];
+
+function unique(array) {
+  return array.concat().sort().filter((item, index, array) => {
+    return !index || item !== array[index - 1];
+  });
+}
+
+console.log(unique(arr));
+</script>
+</body>
+</html>
