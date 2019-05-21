@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/判断是否是window对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组/filter数组去重.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组/filter数组去重2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组/数组去重indexOf.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组/数组去重排序后去重.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/柯里化.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,17 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/扁平转json树.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,7 +48,6 @@
         <option value="$PROJECT_DIR$/85.html" />
         <option value="$PROJECT_DIR$/58.html" />
         <option value="$PROJECT_DIR$/区域.html" />
-        <option value="$PROJECT_DIR$/json树转扁平.html" />
         <option value="$PROJECT_DIR$/交集.html" />
         <option value="$PROJECT_DIR$/扁平转json树.html" />
         <option value="$PROJECT_DIR$/数组/数组去重.html" />
@@ -72,10 +55,12 @@
         <option value="$PROJECT_DIR$/数组/filter数组去重.html" />
         <option value="$PROJECT_DIR$/数组/filter数组去重2.html" />
         <option value="$PROJECT_DIR$/判断是否是window对象.html" />
+        <option value="$PROJECT_DIR$/json树转扁平.html" />
+        <option value="$PROJECT_DIR$/柯里化.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="367" />
     <option name="y" value="3" />
     <option name="width" value="1009" />
@@ -166,19 +151,19 @@
       <workItem from="1557658588218" duration="598000" />
       <workItem from="1557708964407" duration="35000" />
       <workItem from="1558314099542" duration="2234000" />
-      <workItem from="1558321605807" duration="16237000" />
+      <workItem from="1558321605807" duration="17556000" />
+      <workItem from="1558400916567" duration="1500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49801000" />
+    <option name="totallyTimeSpent" value="52620000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="367" y="3" width="1009" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24341412" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17776097" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -222,44 +207,11 @@
     <entry file="file://$PROJECT_DIR$/闭包/闭包3.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/深拷贝浅拷贝/浅拷贝.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="n#src#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/58.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组/布局.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="5" column="114" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="114" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/深拷贝浅拷贝/浅拷贝.html" />
+    <entry file="file://$PROJECT_DIR$/1.css" />
+    <entry file="file://$PROJECT_DIR$/2.html" />
+    <entry file="file://$PROJECT_DIR$/58.html" />
+    <entry file="file://$PROJECT_DIR$/数组/布局.html" />
     <entry file="file://$PROJECT_DIR$/数组/数组方法的使用.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -280,13 +232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -348,8 +293,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/扁平转json树.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/柯里化.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
