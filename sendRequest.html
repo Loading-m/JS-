@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+class TaskQueue {
+  constructor(concurrency) {
+    this.concurrency = concurrency;
+    this.running = 0;
+    this.quene = [];
+    this.results = [];
+    this.callback = null;
+  }
+
+  pushTask(task) {
+    this.quene.push(task);
+    this.next();
+  }
+
+  next() {
+    while (this.running < this.concurrency && this.quene.length) {
+      const task = this.quene.shift();
+      //捕获请求返回值
+      task().then((resolve) => {
+        this.results.push({resolve});
+      }).catch(reason => {
+        this.results.push({reason});
+      }).finally(() => {
+        this.running--;
+        this.next();
+      });
+      this.running++;
+    }
+    //执行回调
+    if (typeof callback === "function" && this.running === 0) {
+      callback(this.results);
+    }
+  }
+}
+
+const sendRequest = (urls, max, callback) => {
+  if (!(urls instanceof Array) || urls.length === 0) {
+    throw new Error('错误');
+  }
+  //最大请求数目限制
+  if (!(max > 0)) {
+    max = urls.length;
+  }
+  //定义一个任务队列
+  const downloadQueue = new TaskQueue(max);
+  downloadQueue.callback = callback;
+  urls.forEach(link => {
+    let task = () => {
+      return fetch(link);
+    };
+    downloadQueue.pushTask(task);
+  });
+};
+const urls = [
+  'http://www.baidu.com',
+  'http://www.wudu.com',
+  'http://www.360.cn',
+  'http://www.baidu.com',
+  'http://www.wudu.com',
+  'http://www.360.cn',
+];
+sendRequest(urls, -1, function () {
+  console.log('finish');
+});
+</script>
+</body>
+</html>

@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/笔试题1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔试题2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fibonacci.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sendRequest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/worker/worker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/小球.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数组去重.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Blog-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Throttle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/font/Menlo-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/font/Menlo-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/font/Menlo-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/font/Menlo-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/inherit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/new.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/scrolling.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/setInterval.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/shuffle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/图片缩放.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/富文本.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/手机正则.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +39,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/小球.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +75,6 @@
         <option value="$PROJECT_DIR$/深拷贝浅拷贝/浅拷贝.html" />
         <option value="$PROJECT_DIR$/数组/数组方法的使用.html" />
         <option value="$PROJECT_DIR$/数组/布局.html" />
-        <option value="$PROJECT_DIR$/1.html" />
         <option value="$PROJECT_DIR$/1.csss.css" />
         <option value="$PROJECT_DIR$/1.css" />
         <option value="$PROJECT_DIR$/2.html" />
@@ -60,13 +92,26 @@
         <option value="$PROJECT_DIR$/柯里化.html" />
         <option value="$PROJECT_DIR$/笔试题1.html" />
         <option value="$PROJECT_DIR$/笔试题2.html" />
+        <option value="&lt;98a57e44-0d22-41ba-a417-e66499b666df&gt;/application/index/view/recharge/withdraw.html" />
+        <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/recharge/withdraw.html" />
+        <option value="$PROJECT_DIR$/对称数字.html" />
+        <option value="&lt;ac67cab1-5ee3-4d68-a709-72277ab6e245&gt;/application/index/view/login/register.html" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/数组去重.html" />
+        <option value="$PROJECT_DIR$/query.html" />
+        <option value="$PROJECT_DIR$/trim.html" />
+        <option value="D:/MusicPro/util/http-p.js" />
+        <option value="$PROJECT_DIR$/sendRequest.html" />
+        <option value="$PROJECT_DIR$/worker/worker.html" />
+        <option value="$PROJECT_DIR$/fibonacci.html" />
+        <option value="$PROJECT_DIR$/小球.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="444" />
+    <option name="x" value="434" />
     <option name="width" value="1009" />
-    <option name="height" value="735" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -157,17 +202,34 @@
       <workItem from="1558400916567" duration="1766000" />
       <workItem from="1558419876363" duration="1280000" />
       <workItem from="1558447978467" duration="52000" />
+      <workItem from="1558603222747" duration="614000" />
+      <workItem from="1558663913031" duration="626000" />
+      <workItem from="1558674538905" duration="4328000" />
+      <workItem from="1558691599100" duration="201000" />
+      <workItem from="1558918652958" duration="128000" />
+      <workItem from="1558918807574" duration="3000" />
+      <workItem from="1559109712979" duration="1931000" />
+      <workItem from="1559111934740" duration="9000" />
+      <workItem from="1559112369356" duration="256000" />
+      <workItem from="1559113667464" duration="1576000" />
+      <workItem from="1559115473239" duration="350000" />
+      <workItem from="1559267990503" duration="11887000" />
+      <workItem from="1559286740750" duration="659000" />
+      <workItem from="1559301005251" duration="18000" />
+      <workItem from="1559529499521" duration="1635000" />
+      <workItem from="1559696998558" duration="296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54218000" />
+    <option name="totallyTimeSpent" value="78735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18381241" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2065053" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32482994" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -184,7 +246,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Json Parser" order="3" />
-      <window_info anchor="right" id="Remote Host" order="4" weight="0.2647504" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.20726173" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,13 +278,6 @@
     <entry file="file://$PROJECT_DIR$/2.html" />
     <entry file="file://$PROJECT_DIR$/58.html" />
     <entry file="file://$PROJECT_DIR$/数组/布局.html" />
-    <entry file="file://$PROJECT_DIR$/数组/数组方法的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/闭包/闭包2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -231,69 +286,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/闭包/闭包4.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/交集.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/判断是否是window对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组/数组去重排序后去重.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组/数组去重indexOf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组/filter数组去重2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数组/filter数组去重.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/扁平转json树.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/柯里化.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/区域拖动选中.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -316,26 +308,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/shuffle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/setInterval.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/common.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/inherit.js">
+    <entry file="file://$PROJECT_DIR$/util/shuffle.js" />
+    <entry file="file://$PROJECT_DIR$/util/common.js" />
+    <entry file="file://$PROJECT_DIR$/扁平转json树.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="-72">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/柯里化.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/对称数字.html" />
+    <entry file="file://$PROJECT_DIR$/判断是否是window对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/交集.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/笔试题1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="216">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -343,6 +350,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组/数组去重排序后去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组/数组去重indexOf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组/数组方法的使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组/filter数组去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组/filter数组去重2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数组去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MusicPro/util/http-p.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sendRequest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/scrolling.js" />
+    <entry file="file://$PROJECT_DIR$/util/setInterval.js" />
+    <entry file="file://$PROJECT_DIR$/util/new.txt" />
+    <entry file="file://$PROJECT_DIR$/util/inherit.js" />
+    <entry file="file://$PROJECT_DIR$/worker/worker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fibonacci.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/小球.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
         </state>
       </provider>
     </entry>

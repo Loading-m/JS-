@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+const query = (url) => {
+  const queryObj = Object.create(null);
+  if (typeof url !== 'string') {
+    throw new Error('传入的不是字符串');
+  }
+  if(url.includes('&')){
+    let queryArr = url.split('&');//[id=111,name=li]
+    if(Array.isArray(queryArr)){
+      queryArr.forEach(item => {
+        let key_value = item.split('=');
+        if (Array.isArray(key_value)) {
+          let key = key_value[0];
+          queryObj[key] = Symbol(key_value[1]);
+        }
+      });
+    }
+  }else{
+    let key_value = url.split('=');
+    if (Array.isArray(key_value)) {
+      queryObj[key_value[0]] = key_value[1];
+    }
+  }
+  return queryObj;
+};
+let obj = query('id=111&css=222');
+console.log(obj.id);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+//如果刚开始就是空格那就先累加着空格个数
+//遇到字符停止计数，再往下遍历，如果遇到空格就计数，但如果再次遇到字符就清计数
+const trim = (str) => {
+  while (true) {
+    if (str.startsWith(" ")) {
+      str = str.substring(1);
+    } else {
+      break;
+    }
+  }
+  while (true) {
+    if (str.endsWith(" ")) {
+      str = str.substring(0, str.length - 1);
+    } else {
+      break;
+    }
+  }
+  return str;
+};
+const trimStr = trim('1 23v 45   ');
+console.log(trimStr);
+</script>
+</body>
+</html>

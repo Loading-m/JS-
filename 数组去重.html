@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let arr = ['abc', 'abcd', 'sss', '2', 'd', 't', '2', 'ss', 'f', '22', 'd'];
+const unique = (arr) => {
+  const uniqueArray = [];
+  arr.forEach(item => {
+    if (uniqueArray.indexOf(item) === -1) {
+      uniqueArray.push(item);
+    }
+  });
+  return uniqueArray;
+};
+function unique2(array) {
+  return array.filter(function (item, index, array) {
+    return array.indexOf(item) === index;
+  });
+}
+let uniqueArr = unique2(arr);
+console.log(uniqueArr)
+</script>
+</body>
+</html>

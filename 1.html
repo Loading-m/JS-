@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+
+    .body:before{
+      position: absolute;
+      top: -19px;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 15px;
+      height: 15px;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin: auto;
+    }
+
+    .body {
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      border-radius: 100% 100% 0 100%;
+      border-bottom: none;
+      position: relative;
+      top: 15px;
+    }
+    .body:after{
+      content: '';
+      width: 110%;
+      height: 15px;
+      background: white;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: -1px;
+      margin: auto;
+    }
+    .name{
+      position: absolute;
+      right: -21px;
+      top: -11px;
+      color: black;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<a href="#" class="body">
+  <span class="name">我</span>
+</a>
+</body>
+</html>
