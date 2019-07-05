@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+var oneTree = [
+  {
+    label: "A",
+    id: "111"
+  },
+  {
+    label: "B",
+    pid: "222",
+    id: "333"
+  },
+  {
+    label: "C",
+    id: "444"
+  },
+  {
+    label: "D",
+    pid: "222",
+    id: "555"
+  },
+  {
+    label: "E",
+    pid: "666",
+    id: "777",
+    children: [
+      {
+        label: "F",
+        pid: "777",
+        id: "888"
+      }
+    ]
+  }
+];
+var twoTree = [
+  {
+    label: "A",
+    tagId: "111"
+  },
+  {
+    label: "BB",
+    pid: "333",
+    tagId: "999"
+  },
+  {
+    label: "CC",
+    tagId: "0000",
+    pid: "444"
+  },
+  {
+    label: "FF",
+    pid: "888",
+    tagId: "1111",
+    children: [
+      {
+        label: "FFF",
+        pid: "1111",
+        tagId: "2222"
+      }
+    ]
+  }
+];
+const putOneTreeToTwoTree = (oneTree, twoTree) => {
+  const oneTreeCloned = JSON.parse(JSON.stringify(oneTree));
+  const twoTreeCloned = JSON.parse(JSON.stringify(twoTree));
+  return oneTreeCloned.map(oneTreeItem => {
+    const id = oneTreeItem.id;
+    let index = twoTreeCloned.length;
+    while (--index >= 0) {
+      const twoTreeItem = twoTreeCloned[index];
+      if (twoTreeItem.pid === id) {
+        if("children" in twoTreeItem){
+          if (oneTreeItem.children) {
+            oneTreeItem.children.concat(twoTreeItem.children);
+          } else {
+            oneTreeItem.children = twoTreeItem.children;
+          }
+          delete twoTreeItem.children
+        }
+      }else{
+        if(oneTreeItem.children){
+          oneTreeItem.children.forEach(item => {
+            if(item.id === twoTreeItem.pid){
+              if("children" in twoTreeItem){
+                if (item.children) {
+                  item.children.concat(twoTreeItem.children);
+                } else {
+                  item.children = twoTreeItem.children;
+                }
+                delete twoTreeItem.children
+              }
+            }
+          });
+        }
+      }
+    }
+    return oneTreeItem;
+  });
+};
+let results = putOneTreeToTwoTree(oneTree, twoTree);
+console.log(results);
+
+</script>
+</body>
+</html>

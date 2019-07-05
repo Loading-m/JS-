@@ -16,11 +16,13 @@ let flatArr = [
 ];
 
 /*遍历所有 如果遇到id有和形参的pid相等的，那么就说明当前遍历的被某个id包括。就把当前的放到他的下面，并且删除*/
+console.time();
+
 function fn(data, pid) {
   let result = [], temp;
   for (let i = 0; i < data.length; i++) {
     if (data[i].pid === pid) {//如果当前遍历到的pid和设置的pid相等
-      let obj = {"title": data[i].title,"pid": data[i].pid,"id": data[i].id};  //就把遍历到的存起来
+      let obj = {"title": data[i].title, "pid": data[i].pid, "id": data[i].id};  //就把遍历到的存起来
       temp = fn(data, data[i].id);
       if (temp.length > 0) {
         obj.children = temp;
@@ -30,7 +32,28 @@ function fn(data, pid) {
   }
   return result;
 }
-let returnTree = fn(flatArr,0);
+
+console.timeEnd();
+console.time();
+function convert(list) {
+  const res = [];
+  const map = list.reduce((res, v) => (res[v.id] = v, res), {});
+  for (const item of list) {
+    if (item.parent_id === 0) {
+      res.push(item);
+      continue;
+    }
+    if (item.parent_id in map) {
+      const parent = map[item.parent_id];
+      parent.children = parent.children || [];
+      parent.children.push(item);
+    }
+  }
+  return res;
+}
+console.timeEnd();
+let returnTree = convert(flatArr);
+// let returnTree = fn(flatArr, 0);
 console.log(returnTree);
 /*
 output:

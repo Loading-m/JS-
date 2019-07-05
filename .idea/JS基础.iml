@@ -8,5 +8,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@types/node" level="application" />
+    <orderEntry type="library" name="@types/vue2-editor" level="application" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
+    <orderEntry type="library" name="@types/lodash" level="application" />
+    <orderEntry type="library" name="@types/echarts" level="application" />
+    <orderEntry type="library" name="@types/highcharts" level="application" />
+    <orderEntry type="library" name="@types/underscore" level="application" />
   </component>
 </module>

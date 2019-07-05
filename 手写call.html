@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function myCall(obj = window, context, ...args) {
+  obj.fn = context;
+  let result = obj.fn(...args);
+  delete obj.fn;
+  return result;
+}
+
+let obj = {
+  name: 3
+};
+var name = 6;
+
+function showName() {
+  console.log(this.name, ...arguments);
+}
+
+myCall(undefined, showName, 2, 3, 4);
+</script>
+</body>
+</html>

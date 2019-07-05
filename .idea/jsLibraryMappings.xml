@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{@types/echarts, @types/highcharts, @types/jquery, @types/lodash, @types/node, @types/underscore, @types/vue2-editor}" />
+  </component>
+</project>
