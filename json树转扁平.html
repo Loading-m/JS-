@@ -23,10 +23,10 @@ let JsonTree = [
     ]
   }
 ];
-function flatten(data) {
+/*function flatten(data) {
   return data.reduce((arr, {id, title, pid, children = []}) =>
     arr.concat([{id, title, pid}], flatten(children)), []);
-}
+}*/
 /*function flatten (data, level = 0) {
   return data.reduce((arr, {Id, Name, Pid, id, children = []}) =>
     arr.concat([{level, Id, Name, Pid, id}], flatten(children, level+1)), [])

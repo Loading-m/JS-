@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/手写call.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/树.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/正则/匹配16进制颜色.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/正则/匹配时间.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JS基础.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JS基础.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/对象排序.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json树转扁平.html" beforeDir="false" afterPath="$PROJECT_DIR$/json树转扁平.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,22 +18,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/树.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -76,9 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/数组/数组方法的使用.html" />
-        <option value="$PROJECT_DIR$/数组/布局.html" />
-        <option value="$PROJECT_DIR$/1.csss.css" />
         <option value="$PROJECT_DIR$/1.css" />
         <option value="$PROJECT_DIR$/2.html" />
         <option value="$PROJECT_DIR$/85.html" />
@@ -93,7 +78,6 @@
         <option value="$PROJECT_DIR$/柯里化.html" />
         <option value="$PROJECT_DIR$/笔试题2.html" />
         <option value="&lt;98a57e44-0d22-41ba-a417-e66499b666df&gt;/application/index/view/recharge/withdraw.html" />
-        <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/recharge/withdraw.html" />
         <option value="$PROJECT_DIR$/对称数字.html" />
         <option value="&lt;ac67cab1-5ee3-4d68-a709-72277ab6e245&gt;/application/index/view/login/register.html" />
         <option value="$PROJECT_DIR$/1.html" />
@@ -106,7 +90,6 @@
         <option value="$PROJECT_DIR$/fibonacci.html" />
         <option value="$PROJECT_DIR$/小球.html" />
         <option value="$PROJECT_DIR$/手写call.html" />
-        <option value="$PROJECT_DIR$/json树转扁平.html" />
         <option value="$PROJECT_DIR$/正则/正则.html" />
         <option value="$PROJECT_DIR$/正则/匹配时间.html" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/controller/Member.php" />
@@ -118,7 +101,6 @@
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/public/assets/index/js/exif.js" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/public/assets/index/js/lrz.js" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/public/assets/index/js/stock.js" />
-        <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/member/index.html" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/api/controller/Checkimg.php" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/recharge/banklist.html" />
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/index/index.html" />
@@ -127,12 +109,18 @@
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/member/check_identity.html" />
         <option value="$PROJECT_DIR$/扁平转json树.html" />
         <option value="$PROJECT_DIR$/树.html" />
+        <option value="$PROJECT_DIR$/json树转扁平.html" />
+        <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/member/index.html" />
+        <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/recharge/withdraw.html" />
+        <option value="$PROJECT_DIR$/对象排序.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/OOp.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="447" />
-    <option name="y" value="8" />
+    <option name="x" value="427" />
+    <option name="y" value="74" />
     <option name="width" value="778" />
     <option name="height" value="744" />
   </component>
@@ -278,19 +266,27 @@
       <workItem from="1562207523542" duration="45000" />
       <workItem from="1562219602279" duration="5963000" />
       <workItem from="1562243299209" duration="2714000" />
-      <workItem from="1562288704563" duration="1547000" />
+      <workItem from="1562288704563" duration="1838000" />
+      <workItem from="1562293570034" duration="218000" />
+      <workItem from="1562296281063" duration="1455000" />
+      <workItem from="1562307861462" duration="107000" />
+      <workItem from="1562547500517" duration="728000" />
+      <workItem from="1562563291548" duration="5000" />
+      <workItem from="1562742366688" duration="1528000" />
+      <workItem from="1562744910243" duration="55000" />
+      <workItem from="1562831642121" duration="635000" />
+      <workItem from="1562897650898" duration="2398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149385000" />
+    <option name="totallyTimeSpent" value="156805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19591528" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22390318" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32482994" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32993197" />
@@ -340,9 +336,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/闭包2.html" />
-    <entry file="file://$PROJECT_DIR$/闭包3.html" />
-    <entry file="file://$PROJECT_DIR$/闭包练习.html" />
     <entry file="file://$PROJECT_DIR$/闭包练习2.html" />
     <entry file="file://$PROJECT_DIR$/深拷贝浅拷贝/浅拷贝.html" />
     <entry file="file://$PROJECT_DIR$/1.css" />
@@ -376,13 +369,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sendRequest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -458,13 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -557,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/柯里化.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/扁平转json树.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -571,10 +543,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sendRequest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/树.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="360">
+          <caret line="77" column="38" lean-forward="true" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json树转扁平.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="77" lean-forward="true" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/柯里化.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/对象排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>

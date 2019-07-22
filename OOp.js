@@ -1,0 +1,18 @@
+function Circle(radius) {
+  this.radius = radius;
+  let defaultLocation = {x: 0, y: 0};
+  this.draw = function () {
+    console.log('draw');
+  };
+  Object.defineProperty(this, 'defaultLocation', {
+    get: function () {
+      return defaultLocation;
+    },
+    set: function (value) {
+      defaultLocation = value;
+    }
+  });
+}
+
+const circle = new Circle(10);
+circle.draw();
