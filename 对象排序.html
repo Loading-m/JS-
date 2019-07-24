@@ -19,12 +19,21 @@ const obj = [
   {"name": "王五", "class": 1, "score": 80},
   {"name": "赵六", "class": 4, "score": 94},
 ];
-/*班级从小到大 a-b   班级相同时 按成绩从大到小 班级成绩都相同 按照原有的顺序进行排列*/
-obj.sort((a, b) => {
-  if(a.class > b.class){
-    return -1
+/*题目要求：班级从小到大  班级相同时 按成绩从大到小 班级成绩都相同 按照原有的顺序进行排列*/
+obj.sort(function (a, b) {
+  if (a.class < b.class) {
+    return -1;
+  }
+  if (a.class === b.class) {
+    if (a.score > b.score) {
+      return 1;
+    }
+  }
+  if(a.class === b.class && a.score === b.score){
+    return 0
   }
 });
+console.log(obj);
 </script>
 </body>
 </html>
