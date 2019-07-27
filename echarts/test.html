@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="echarts.js"></script>
+  <script src="infographic.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+
+var myChart = echarts.init(document.getElementById('main'),'infographic');
+
+var option = {
+
+  title: {
+    text: 'ECharts 入门示例'
+  },
+  tooltip: {},
+  legend: {
+    data:['销量']
+  },
+  toolbox:{
+    feature:{
+      dataZoom:{
+
+      }
+    }
+  },
+  dataZoom: [
+    { // 第二个 dataZoom 组件
+      type: 'slider',
+      show: true,
+      xAxisIndex: [0],
+      start: 1,
+      end: 35
+    },
+    { // 第二个 dataZoom 组件
+      type: 'inside',
+      show: true,
+      xAxisIndex: [0],
+      start: 1,
+      end: 35
+    }
+  ],
+  visualMap: [ // 可以同时定义多个 visualMap 组件。
+    { // 第一个 visualMap 组件
+      type: 'piecewise', // 定义为连续型 viusalMap,
+      range: [4, 15],
+      calculable:true,
+
+    }
+  ],
+  xAxis: {
+    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+  },
+  yAxis: {},
+  grid:{
+    x:110,
+    y:80,
+    borderWidth:1
+  },
+  series: [{
+    name: '销量',
+    type: 'bar',
+    data: [5, 20, 36, 10, 10, 20]
+  }]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+myChart.currentIndex = -1;
+
+setInterval(function () {
+  var dataLen = option.series[0].data.length;
+  // 取消之前高亮的图形
+  myChart.dispatchAction({
+    type: 'downplay',
+    seriesIndex: 0,
+    dataIndex: myChart.currentIndex
+  });
+  myChart.currentIndex = (myChart.currentIndex + 1) % dataLen;
+  // 高亮当前图形
+  myChart.dispatchAction({
+    type: 'highlight',
+    seriesIndex: 0,
+    dataIndex: myChart.currentIndex
+  });
+  // 显示 tooltip
+  myChart.dispatchAction({
+    type: 'showTip',
+    seriesIndex: 0,
+    dataIndex: myChart.currentIndex
+  });
+}, 1000);
+
+</script>
+</body>
+</html>
