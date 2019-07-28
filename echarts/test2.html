@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="echarts.min.js"></script>
+  <script src="infographic.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+
+const myChart = echarts.init(document.getElementById('main'));
+const data = [
+  {
+    value: 335,
+    name: '平均阅读进度',
+    itemStyle: {color: {colorStops: [{offset: 0, color: '#2FB1FE'}, {offset: 1, color: '#23B2FF'}]}}
+  },
+  {
+    value: 120,
+    name: '跳出率',
+    itemStyle: {color: {colorStops: [{offset: 0, color: '#FE5D5D'}, {offset: 1, color: '#FC4D2E'}]}}
+  },
+  {
+    value: 310,
+    name: '平均阅读速度',
+    itemStyle: {color: {colorStops: [{offset: 0, color: '#42B361'}, {offset: 1, color: '#41CD84'}]}}
+  },
+  {
+    value: 310,
+    name: 'money',
+    itemStyle: {color: {colorStops: [{offset: 0, color: '#FFEB80'}, {offset: 1, color: '#F4C51C'}]}}
+  }
+];
+const option = {
+  tooltip: {
+    trigger: 'item',
+    padding: [5, 20],
+    extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);',
+    formatter: function (params) {
+      if (params.name === "money") {
+        return `<span style="color:black;text-align: center;display: block;height: 5px;">${params.value}元</span><br><span style="color:dodgerblue;float: right;">${params.percent}%</span>`;
+      }
+      if (params.name === "平均阅读速度") {
+        return `<span style="color:black;text-align: center;display: block;height: 5px;">${params.value}字/秒</span><br><span style="color:dodgerblue;float: right;">${params.percent}%</span>`;
+      }
+      if (params.name === "跳出率") {
+        return `<span style="color:black;text-align: center;display: block;height: 5px;">${params.name}</span><br><span style="color:dodgerblue;">${params.percent}%</span>`;
+      }
+      if (params.name === "平均阅读进度") {
+        return `<span style="color:black;text-align: center;display: block;height: 5px;">${params.name}</span><br><span style="color:dodgerblue;">${params.percent}%</span>`;
+      }
+      console.log(params);
+    },
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+  },
+  legend: {
+    data: ['平均阅读进度', '跳出率', '平均阅读速度'],
+    icon: 'circle',
+    itemHeight: 9,
+    bottom: 40,
+    formatter: function (name) {
+      let total = 0;
+      let target;
+      for (let i = 0, l = data.length; i < l; i++) {
+        total += data[i].value;
+        if (data[i].name === name) {
+          target = data[i].value;
+        }
+      }
+      if (name === '跳出率' || name === '平均阅读进度') {
+        var arr = [
+          '{a|' + ((target / total) * 100).toFixed(2) + '%}',
+          '{b|' + name + '}',
+        ];
+        return arr.join('\n');
+      }
+      if (name === '平均阅读速度') {
+        var arr = [
+          '{a|' + target + '字/秒}',
+          '{b|' + name + '}',
+        ];
+        return arr.join('\n');
+      }
+    },
+    textStyle: {
+      rich: {
+        a: {
+          fontSize: 20,
+          verticalAlign: 'top',
+          align: 'center',
+          padding: [0, 0, 28, 0]
+        },
+        b: {
+          fontSize: 14,
+          align: 'center',
+          padding: [0, 0, 0, 0],
+          lineHeight: 25
+        }
+      }
+    }
+  },
+  series: [
+    {
+      name: '图文数据',
+      type: 'pie',
+      radius: ['30%', '50%'],
+      center: ['50%', '40%'],
+      avoidLabelOverlap: false,
+      label: {
+        normal: {
+          show: false,
+        },
+        emphasis: {
+          show: false
+        }
+      },
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data: data,
+    }
+  ]
+};
+myChart.setOption(option);
+</script>
+</body>
+</html>

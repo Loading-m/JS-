@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/echarts/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/infographic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/test2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -63,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/交集.html" />
         <option value="$PROJECT_DIR$/数组/数组去重.html" />
         <option value="$PROJECT_DIR$/数组/数组去重排序后去重.html" />
         <option value="$PROJECT_DIR$/数组/filter数组去重.html" />
@@ -114,13 +112,14 @@
         <option value="&lt;288d50d9-a9e5-41b7-9bc3-b9272600481d&gt;/application/index/view/member/check_identity.html" />
         <option value="$PROJECT_DIR$/echarts/echarts.js" />
         <option value="$PROJECT_DIR$/echarts/test.html" />
+        <option value="$PROJECT_DIR$/echarts/test2.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="427" />
-    <option name="y" value="74" />
-    <option name="width" value="778" />
+    <option name="x" value="386" />
+    <option name="y" value="6" />
+    <option name="width" value="1267" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -287,17 +286,19 @@
       <workItem from="1564105889151" duration="127000" />
       <workItem from="1564106069521" duration="5513000" />
       <workItem from="1564121605575" duration="581000" />
+      <workItem from="1564248470337" duration="73000" />
+      <workItem from="1564278274600" duration="12051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170014000" />
+    <option name="totallyTimeSpent" value="182138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24205749" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.204236" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32482994" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32993197" />
@@ -347,8 +348,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/数组/布局.html" />
-    <entry file="file://$PROJECT_DIR$/util/shuffle.js" />
     <entry file="file://$PROJECT_DIR$/util/common.js" />
     <entry file="file://$PROJECT_DIR$/对称数字.html" />
     <entry file="file://D:/MusicPro/util/http-p.js">
@@ -535,26 +534,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/echarts/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="21" column="14956" selection-start-line="21" selection-start-column="14956" selection-end-line="21" selection-end-column="14956" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/echarts/infographic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4488" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/echarts/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/判断是否是window对象.html">
@@ -631,6 +613,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/echarts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-787">
+          <caret line="21" column="14956" selection-start-line="21" selection-start-column="14956" selection-end-line="21" selection-end-column="14956" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="63" column="4" selection-start-line="59" selection-start-column="2" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
