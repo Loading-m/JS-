@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+/*'abcaakjbb' => {'a':2,'b':2}
+'abbkejsbcccwqaa' => {'c':3}*/
+function findLongest(str) {
+  if (!str) return {};
+  let count = 0;
+  let maxCount = 0;
+  let cur = str[0];
+  let res = {};
+  for (let i = 0; i < str.length; i++) {
+    const s = str[i];
+    if (s === cur) {
+      count++;
+      if (count > maxCount) {
+        res = {[s]: count};
+        maxCount = count;
+      }
+      if (count === maxCount) {
+        res[s] = count;
+      }
+    } else {
+      count = 1;
+      cur = s;
+    }
+  }
+  return res;
+}
+</script>
+</body>
+</html>

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/echarts/仪表盘.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/进度.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/进度2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/深度遍历.html" beforeDir="false" afterPath="$PROJECT_DIR$/深度遍历.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +72,9 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/echarts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
+    <property name="nodejs.jest.jest_package" value="" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -212,7 +213,7 @@
       <workItem from="1564330928664" duration="128000" />
       <workItem from="1564363259172" duration="1158000" />
       <workItem from="1564364487195" duration="620000" />
-      <workItem from="1564365145482" duration="263000" />
+      <workItem from="1564365145482" duration="6093000" />
     </task>
     <servers />
   </component>

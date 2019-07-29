@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function hash(arg) {
+  if (typeof arg === 'string') return `"${arg}"`;
+  if (typeof arg === 'number' || typeof arg === 'undefined') return `${arg}`;
+  if (typeof arg === 'symbol' || typeof arg === 'boolean') return arg.toString();
+  if (arg === null) return 'null';
+  if (Array.isArray(arg)) {
+    let res = '[';
+    for (const item of arg) {
+      res += `${hash(item)},`;
+    }
+    res += ']';
+    return res;
+  }
+  let res = '{';
+  const keys = Object.keys(arg).sort();
+  for (const key of keys) {
+    res += `${key}:${hash(arg[key])},`;
+  }
+  res += '}';
+  return res;
+}
+
+function distinct(arr) {
+  const res = [];
+  const map = {};
+  for (const item of arr) {
+    const key = hash(item);
+    if (!map[key]) {
+      map[key] = 1;
+      res.push(item);
+    }
+  }
+  return res;
+}
+distinct([123, "meili", "123", "mogu", 123]);
+distinct([123, [1, 2, 3], [1, "2", 3], [1, 2, 3], "meili"]);
+distinct([123, {a: 1}, {a: {b: 1}}, {a: "1"}, {a: {b: 1}}, "meili"]);
+</script>
+</body>
+</html>
