@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ECharts">
+  <meta name="author" content="kener.linfeng@gmail.com">
+  <title>ECharts · Example</title>
+
+  <script src="./echarts.min.js"></script>
+
+</head>
+
+<body>
+<div id="chart" class="chart" style="height: 530px;"></div>
+
+<script type="text/javascript">
+// 基于准备好的dom，初始化echarts图表
+var myChart = echarts.init(document.getElementById('chart'));
+
+const option = {
+  title: {
+    text: '温度计',
+    show: false
+  },
+  tooltip: {
+    show: true,
+    formatter: '{c}%'
+  },
+  xAxis: [{
+    show: false,
+    min: 0,
+    max: 100,
+  }, {
+    show: false,
+    data: [],
+    min: 0,
+    max: 100,
+  }],
+  yAxis: [{
+    show: false,
+    data: []
+  }, {
+    show: false,
+    data: []
+  }, {
+    show: false,
+    data: [],
+  }, {
+    show: false,
+    min: 0,
+    max: 100,
+
+  }],
+  series: [{
+    name: '条',
+    type: 'bar',
+    // 对应上面yAxis的第一个对象配置
+    yAxisIndex: 0,
+    data: [50],
+    barWidth: 8, //改这个以及下面的每个宽度值进行大小改造
+    itemStyle: {
+      normal: {
+        color: 'red', //自己改颜色
+        barBorderRadius: 25,
+      }
+    },
+    z: 2
+  }, {
+    name: '黑框',
+    type: 'bar',
+    yAxisIndex: 1,
+    barGap: '-100%',
+    data: [100],
+    barWidth: 12,
+    itemStyle: {
+      normal: {
+        color: '#020a32',
+        barBorderRadius: 50,
+      }
+    },
+    z: 1
+  }, {
+    name: '外框',
+    type: 'bar',
+    yAxisIndex: 2,
+    barGap: '-100%',
+    data: [100],
+    barWidth: 16,
+    itemStyle: {
+      normal: {
+        color:'red',
+        barBorderRadius: 50,
+      }
+    },
+    z: 0
+  }, {
+    name: '圆',
+    type: 'scatter',
+    hoverAnimation: false,
+    data: [0],
+    yAxisIndex: 0,
+    symbolSize: 13,
+    itemStyle: {
+      normal: {
+        color: 'red',
+        opacity: 1,
+      }
+    },
+    z: 2
+  }, {
+    name: '白圆',
+    type: 'scatter',
+    hoverAnimation: false,
+    data: [0],
+    yAxisIndex: 1,
+    symbolSize: 17,
+    itemStyle: {
+      normal: {
+        color: '#020a32',
+        opacity: 1,
+      }
+    },
+    z: 1
+  }, {
+    name: '外圆',
+    type: 'scatter',
+    hoverAnimation: false,
+    data: [0],
+    yAxisIndex: 2,
+    symbolSize: 22,
+    itemStyle: {
+      normal: {
+        color: 'pink',
+        opacity: 1,
+      }
+    },
+    z: 0
+  }]
+};
+// 为echarts对象加载数据
+myChart.setOption(option);
+
+</script>
+</body>
+</html>

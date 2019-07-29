@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ECharts">
+  <meta name="author" content="kener.linfeng@gmail.com">
+  <title>ECharts · Example</title>
+
+  <script src="./echarts.min.js"></script>
+
+</head>
+
+<body>
+<div id="chart" class="chart" style="height: 530px;"></div>
+
+<script type="text/javascript">
+// 基于准备好的dom，初始化echarts图表
+var myChart = echarts.init(document.getElementById('chart'));
+
+const option = {
+  color: 'red', //前景条的颜色
+  tooltip: {
+    show: true,
+    formatter: '{c}%'
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    top: 'middle'
+  },
+  xAxis: [
+    {
+      show: false,
+      type: 'value',
+      max: 100 //可以设最大值
+    }
+  ],
+  yAxis: [
+    {
+      show: false,
+      type: 'category',
+      data: ['1'],
+      axisTick: {
+        alignWithLabel: true
+      }
+    }
+  ],
+  series: [
+    // 背景条
+    {
+      type: 'bar',
+      barWidth: 12,
+      silent: true,
+      itemStyle: {
+        normal: { color: '#003363', barBorderRadius: 45 }
+      },
+      barGap: '-100%', // 可以使两个条重叠
+      barCategoryGap: '50%',
+      data: [100]
+    },
+    // 前景条
+    {
+      type: 'bar',
+      itemStyle: {
+        normal: {
+          barBorderRadius: 45
+        }
+      },
+      barWidth: '12',
+      data: [70]
+    },
+
+  ]
+};
+
+// 为echarts对象加载数据
+myChart.setOption(option);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ECharts">
+  <meta name="author" content="kener.linfeng@gmail.com">
+  <title>ECharts · Example</title>
+
+  <script src="./echarts.min.js"></script>
+
+</head>
+
+<body>
+<div id="chart" class="chart" style="height: 530px;"></div>
+
+<script type="text/javascript">
+// 基于准备好的dom，初始化echarts图表
+var myChart = echarts.init(document.getElementById('chart'));
+
+option = {
+  backgroundColor: '#000643',
+  toolbox: {
+    feature: {
+      restore: {},
+      saveAsImage: {}
+    }
+  },
+
+  series: [
+    {
+      name: '百分比100%',
+      type: 'gauge',
+      //半径
+      radius: 150,
+      //起始角度。圆心 正右手侧为0度，正上方为90度，正左手侧为180度。
+      startAngle: 180,
+      //结束角度。
+      endAngle: 0,
+      center: ['50%', '50%'],
+      //仪表盘轴线相关配置。
+      axisLine: {            // 坐标轴线
+        show:false,
+        lineStyle: {       // 属性lineStyle控制线条样式
+          width: 10,
+          color:[[1, 'red']],
+          shadowColor: 'red',
+          shadowBlur: 10,
+          shadowOffsetX:2
+        }
+      },
+      //分隔线样式。
+      splitLine: {
+        show: false,
+      },
+      //刻度样式
+      axisTick: {
+        show: false,
+      },
+      //刻度标签。
+      axisLabel: {
+        show:false,
+      },
+      //仪表盘指针。
+      pointer: {
+        //这个show属性好像有问题，因为在这次开发中，需要去掉指正，我设置false的时候，还是显示指针，估计是BUG吧，我用的echarts-3.2.3；希望改进。最终，我把width属性设置为0，成功搞定！
+        show: false,
+        //指针长度
+        length:'90%',
+        width:0,
+      },
+      //仪表盘标题。
+      title: {
+        show: true,
+        offsetCenter: [0, '-10%'], // x, y，单位px
+        textStyle: {
+          color: 'white',
+          fontSize: 30
+        }
+      },
+      //仪表盘详情，用于显示数据。
+      detail: {
+        show: true,
+        offsetCenter: [0, '-40%'],
+        formatter: '{value}%',
+        textStyle: {
+          fontSize: 30,
+          color:'#F8F43C'
+        }
+      },
+      data: [
+        { value:50,name:'完成率'},
+      ],
+      zlevel:1
+    },
+    {
+      name: '进度条',
+      type: 'gauge',
+      //半径
+      radius: 150,
+      //起始角度。圆心 正右手侧为0度，正上方为90度，正左手侧为180度。
+      startAngle: 180,
+      //结束角度。
+      endAngle: 0,
+      center: ['50%', '50%'],
+      //仪表盘轴线相关配置。
+      axisLine: {            // 坐标轴线
+        show:true,
+        lineStyle: {       // 属性lineStyle控制线条样式
+          width: 10,
+          color:[[0.2, '#F4F33C']]
+        }
+      },
+      //分隔线样式。
+      splitLine: {
+        show:true,
+        length:10,
+        lineStyle:{
+          color: 'white',
+          width:3
+        }
+      },
+      //刻度样式
+      axisTick: {
+        show: false,
+      },
+      //刻度标签。
+      axisLabel: {
+        show:false,
+      },
+      //仪表盘指针。
+      pointer: {
+        //这个show属性好像有问题，因为在这次开发中，需要去掉指正，我设置false的时候，还是显示指针，估计是BUG吧，我用的echarts-3.2.3；希望改进。最终，我把width属性设置为0，成功搞定！
+        show: false,
+      },
+      //仪表盘标题。
+      title: {
+        show: false
+      },
+      //仪表盘详情，用于显示数据。
+      detail: {
+        show: false,
+        offsetCenter: [0, '-10%'],
+        formatter: '',
+        textStyle: {
+          fontSize: 0
+        }
+      },
+      data: [
+        {name:'数量', value:'n'},
+      ],
+      zlevel:2
+    },
+    {
+      name: '外侧线条',
+      type: 'gauge',
+      //半径
+      radius: 160,
+      //起始角度。圆心 正右手侧为0度，正上方为90度，正左手侧为180度。
+      startAngle: 180,
+      //结束角度。
+      endAngle: 0,
+      center: ['50%', '50%'],
+      //仪表盘轴线相关配置。
+      axisLine: {            // 坐标轴线
+        show:true,
+        lineStyle: {       // 属性lineStyle控制线条样式
+          width: 3,
+          color:[[1, '#00F5F8']]
+        }
+      },
+      //分隔线样式。
+      splitLine: {
+        show: false,
+      },
+      //刻度样式
+      axisTick: {
+        show: false,
+      },
+      //刻度标签。
+      axisLabel: {
+        show:false,
+      },
+      //仪表盘指针。
+      pointer: {
+        //这个show属性好像有问题，因为在这次开发中，需要去掉指正，我设置false的时候，还是显示指针，估计是BUG吧，我用的echarts-3.2.3；希望改进。最终，我把width属性设置为0，成功搞定！
+        show: false,
+      },
+      //仪表盘标题。
+      title: {
+        show: false
+      },
+      //仪表盘详情，用于显示数据。
+      detail: {
+        show: false,
+        offsetCenter: [0, '-10%'],
+        formatter: '',
+        textStyle: {
+          fontSize: 0
+        }
+      },
+      data: [
+        {name:'数量', value:'n'},
+      ],
+      zlevel:3
+    }
+  ]
+};
+
+// 为echarts对象加载数据
+myChart.setOption(option);
+
+</script>
+</body>
+</html>
