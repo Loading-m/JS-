@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+//后台返回
+let rules = {
+  co: true,
+  to: false
+};
+const getAccessRouterList = (allRoutes, rules) => {
+  return allRoutes.filter(item => {
+    if (rules[item.name]) {
+      if (item.children) {
+        item.children = getAccessRouterList(item.children, rules);
+      }
+      return true;
+    } else {
+      return false;
+    }
+  });
+};
+
+// entries二维数组
+function a(rules) {
+  if (Object.entries(rules).every(item => item[1])) {
+    //全部都能访问
+  } else {
+    const routerList = getAccessRouterList(allRoutes, rules);
+    const accessRouter = routerList.concat(routes);//routes为静态可访问的，routerList为筛选后的
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+// 2. 递归拷贝
+function deepClone(obj) {
+  let copy = obj instanceof Array ? [] : {};
+  for (let i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      copy[i] = typeof obj[i] === 'object' ? deepClone(obj[i]) : obj[i];
+    }
+  }
+  return copy;
+}
+
+</script>
+</body>
+</html>

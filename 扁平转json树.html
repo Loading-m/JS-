@@ -35,6 +35,7 @@ function fn(data, pid) {
 
 console.timeEnd();
 console.time();
+
 function convert(list) {
   const res = [];
   const map = list.reduce((res, v) => (res[v.id] = v, res), {});
@@ -51,6 +52,7 @@ function convert(list) {
   }
   return res;
 }
+
 console.timeEnd();
 let returnTree = convert(flatArr);
 // let returnTree = fn(flatArr, 0);
@@ -58,15 +60,15 @@ console.log(returnTree);
 /*
 output:
 [
-{id: 1, title: '解忧杂货铺1', pid: 0},
+{id: 1, title: '解忧杂货铺1', parent_id: 0},
   {
-    id: 2, title: '解忧杂货铺2', pid: 0, children: [
-      {id: 6, title: '解忧杂货铺4-2', pid: 2},
+    id: 2, title: '解忧杂货铺2', parent_id: 0, children: [
+      {id: 6, title: '解忧杂货铺2-2', parent_id: 2},
       {
-        id: 3, title: '解忧杂货铺2-1', pid: 2, children: [
+        id: 3, title: '解忧杂货铺2-1', parent_id: 2, children: [
           {
-            id: 4, title: '解忧杂货铺3-1', pid: 3, children: [
-              {id: 5, title: '解忧杂货铺4-1', pid: 4},
+            id: 4, title: '解忧杂货铺3-1', parent_id: 3, children: [
+              {id: 5, title: '解忧杂货铺4-1', parent_id: 4},
             ]
           },
         ]
