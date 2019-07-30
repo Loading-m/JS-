@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/懒加载.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/权限.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/深拷贝.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/节流.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/防抖.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/手写call.html" beforeDir="false" afterPath="$PROJECT_DIR$/手写call.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/new.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +215,7 @@
       <workItem from="1564364487195" duration="620000" />
       <workItem from="1564365145482" duration="9102000" />
       <workItem from="1564397498291" duration="3875000" />
-      <workItem from="1564451396805" duration="7347000" />
+      <workItem from="1564451396805" duration="15689000" />
     </task>
     <servers />
   </component>

@@ -6,17 +6,19 @@
 </head>
 <body>
 <script>
-function myNew(fun) {
-  return function () {
-    // 创建一个新对象且将其隐式原型指向构造函数原型
-    let obj = {
-      __proto__: fun.prototype
-    };
-    // 执行构造函数
-    fun.call(obj, ...arguments);
-    // 返回该对象
-    return obj;
-  };
+/*
+创建一个空对象
+获取构造函数
+设置空对象的原型
+绑定 this 并执行构造函数
+确保返回值为对象
+*/
+function create() {
+  let obj = {};
+  let Con = [].shift.call(arguments);
+  obj.__proto__ = Con.prototype;
+  let result = Con.apply(obj, arguments);
+  return result instanceof Object ? result : obj;
 }
 
 function person(name, age) {
