@@ -14,7 +14,7 @@ let data = [
     "children": [
       {
         "title": "parent 1-1",
-        "checked": true,
+        "checked": false,
         "children": [
           {
             "checked": true,
@@ -35,7 +35,7 @@ let data = [
             "title": "leaf 1-2-1"
           },
           {
-            "checked": false,
+            "checked": true,
             "title": "leaf 1-2-1"
           }
         ]
@@ -45,36 +45,16 @@ let data = [
 ];
 
 //下面的所有子节点都会被选中
-function isChecked(data, parent = null) {
-  let tempFlagArr = [];
+function isChecked(data) {
   for (let i = 0; i < data.length; i++) {
     let current = data[i];
     if ("children" in current) {
-      isChecked(current.children, current);
-    } else {
-      tempFlagArr.push(current.checked);
-      parent.checked = tempFlagArr.every(item => item);
+      current.checked = current.children.every(item => item.checked);
+      isChecked(current.children);
     }
   }
   return data;
 }
-/*function isChecked(data) {
-  if (!'children' in data) {
-    return data['checked'];
-  } else {
-    for (let key in data['children']) {
-      if (data['children'].hasOwnProperty(key)) {
-        let i = isChecked(data['children'][i]);
-        if (i) {
-          data['checked'] = true;
-        } else {
-          data['checked'] = false;
-        }
-      }
-    }
-    return data['checked'];
-  }
-}*/
 
 let checked = isChecked(data);
 console.log(checked);

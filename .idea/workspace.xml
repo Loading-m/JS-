@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/下载.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fibonacci.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/json树转扁平.html" beforeDir="false" afterPath="$PROJECT_DIR$/json树转扁平.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sendRequest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/下拉.html" beforeDir="false" afterPath="$PROJECT_DIR$/下拉.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/对比两个对象是否相等 值.html" beforeDir="false" afterPath="$PROJECT_DIR$/对比两个对象是否相等 值.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/懒加载.html" beforeDir="false" afterPath="$PROJECT_DIR$/懒加载.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/权限.html" beforeDir="false" afterPath="$PROJECT_DIR$/权限.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/柯里化.html" beforeDir="false" afterPath="$PROJECT_DIR$/柯里化.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/深度遍历.html" beforeDir="false" afterPath="$PROJECT_DIR$/深度遍历.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/深拷贝.html" beforeDir="false" afterPath="$PROJECT_DIR$/深拷贝.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +198,8 @@
       <workItem from="1564451396805" duration="19125000" />
       <workItem from="1564550074381" duration="18687000" />
       <workItem from="1564621551047" duration="26000" />
-      <workItem from="1564621606332" duration="16940000" />
+      <workItem from="1564621606332" duration="17665000" />
+      <workItem from="1564659433780" duration="1492000" />
     </task>
     <servers />
   </component>
