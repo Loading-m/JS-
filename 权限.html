@@ -23,6 +23,244 @@ const getAccessRouterList = (allRoutes, rules) => {
     }
   });
 };
+const allRoutes = [
+  {
+    path: '/',
+    redirect: 'apLogin'
+  },
+  {
+    path: '/apLogin',
+    name: 'apLogin',
+    meta: {
+      title: '码尚付-密码登录'
+    },
+    component: "apLogin"
+  },
+  {
+    path: '/guest',
+    name: 'ReceiptCodeView',
+    meta: {
+      title: '码尚付-获取提交收款码(访客)',
+    },
+    component: "ReceiptCodeView",
+  },
+  {
+    path: '/smsLogin',
+    name: 'smsLogin',
+    meta: {
+      title: '码尚付-验证码登录'
+    },
+    component: "SmsLogin"
+  },
+  {
+    path: '/forget',
+    name: 'forget',
+    meta: {
+      title: '码尚付-重置密码'
+    },
+    component: "ForgetPwd",
+  },
+  {
+    path: '/register',
+    name: 'register',
+    props: route => ({
+      code: route.query.code
+    }),
+    meta: {
+      title: '码尚付-注册'
+    },
+    component: "Register",
+  },
+  {
+    path: '/system',
+    name: 'system',
+    meta: {
+      title: '码尚付-首页',
+      requireAuth: true
+    },
+    children: [
+      {
+        path: '/system/card',
+        name: 'card',
+        meta: {
+          title: '码尚付-我的银行卡',
+          requireAuth: true
+        },
+        component: "Card",
+      },
+      {
+        path: '/system/tradepwd',
+        name: 'tradepwd',
+        meta: {
+          title: '码尚付-交易密码设置',
+          requireAuth: true
+        },
+        component: "Tradepwd",
+      },
+      {
+        path: '/system/real',
+        name: 'real',
+        meta: {
+          title: '码尚付-实名认证',
+          requireAuth: true
+        },
+        component: "RealName",
+      },
+      {
+        path: '/system/information',
+        name: 'information',
+        meta: {
+          title: '码尚付-个人信息',
+          requireAuth: true
+        },
+        component: "Information",
+      },
+      {
+        path: '/system/grab',
+        name: 'grab',
+        meta: {
+          title: '码尚付-抢单',
+          requireAuth: true
+        },
+        component: "Grab",
+      },
+      {
+        path: '/system/gathering',
+        name: 'gathering',
+        meta: {
+          title: '码尚付-收款单列表',
+          requireAuth: true
+        },
+        component: "Gathering",
+      },
+      {
+        path: '/system/wechat',
+        name: 'wechat',
+        meta: {
+          title: '码尚付-微信收款单列表',
+          requireAuth: true
+        },
+        component: "Wechat",
+      },
+      {
+        path: '/system/alipay',
+        name: 'alipay',
+        meta: {
+          title: '码尚付-支付宝收款单列表',
+          requireAuth: true
+        },
+        component: "Alipay",
+      },
+      {
+        path: '/system/alitoCard',
+        name: 'alitoCard',
+        meta: {
+          title: '码尚付-支付宝转银行卡收款单列表',
+          requireAuth: true
+        },
+        component: "AlitoCard",
+      },
+      {
+        path: '/system/account',
+        name: 'account',
+        meta: {
+          title: '码尚付-管理收款账号',
+          requireAuth: true
+        },
+        component: "Account",
+      },
+      {
+        path: '/system/deposit',
+        name: 'deposit',
+        meta: {
+          title: '码尚付-存款记录',
+          requireAuth: true
+        },
+        component: "Deposit",
+      },
+      {
+        path: '/system/widthDraw',
+        name: 'widthDraw',
+        meta: {
+          title: '码尚付-取款记录',
+          requireAuth: true
+        },
+        component: "Withdraw",
+      },
+      {
+        path: '/system/moneychange',
+        name: 'moneychange',
+        meta: {
+          title: '码尚付-账变记录',
+          requireAuth: true
+        },
+        component: "Moneychange",
+      },
+      {
+        path: '/system/ondeposit',
+        name: 'ondeposit',
+        meta: {
+          title: '码尚付-在线存款',
+          requireAuth: true
+        },
+        component: "Onlinedeposit",
+      },
+      {
+        path: '/system/onwithdraw',
+        name: 'onwithdraw',
+        meta: {
+          title: '码尚付-在线取款',
+          requireAuth: true
+        },
+        component: "Onwidthdraw",
+      },
+      {
+        path: '/system/contrive',
+        name: 'contrive',
+        meta: {
+          title: '码尚付-推广中心',
+          requireAuth: true
+        },
+        component: "Contrive",
+      },
+      {
+        path: '/system/public',
+        name: 'public',
+        meta: {
+          title: '码尚付-消息中心',
+          requireAuth: true
+        },
+        component: "Public",
+      },
+      {
+        path: '/system/grade',
+        name: 'grade',
+        meta: {
+          title: '码尚付-等级管理',
+          requireAuth: true
+        },
+        component: "Grade",
+      },
+      {
+        path: '/system/loginList',
+        name: 'loginList',
+        meta: {
+          title: '码尚付-登录日志',
+          requireAuth: true
+        },
+        component: "LoginList",
+      }
+    ],
+  },
+  {
+    path: '*',
+    name: 'notFound',
+    meta: {
+      title: '码尚付-页面未找到'
+    },
+    component: "NotFound"
+  }
+];
 
 // entries二维数组
 function a(rules) {
@@ -30,7 +268,7 @@ function a(rules) {
     //全部都能访问
   } else {
     const routerList = getAccessRouterList(allRoutes, rules);
-    const accessRouter = routerList.concat(routes);//routes为静态可访问的，routerList为筛选后的
+    const accessRouter = routerList.concat({a: 2});//routes为静态可访问的，routerList为筛选后的
   }
 }
 

@@ -6,7 +6,28 @@
 </head>
 <body>
 <script>
-
+const objOne = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+const objTwo = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+};
+const isObjEqual = (objOne, objTwo) => {
+  const objOneKeys = Object.keys(objOne);
+  const objTwoKeys = Object.keys(objTwo);
+  if (objOneKeys.length !== objTwoKeys.length) {
+    return false;
+  } else {
+    return !objOneKeys.some(key => objOne[key] !== objTwo[key]);
+  }
+};
+let objEqual = isObjEqual(objOne, objTwo);
+console.log(objEqual);
 </script>
 </body>
 </html>

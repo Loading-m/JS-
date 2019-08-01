@@ -23,6 +23,48 @@ let JsonTree = [
     ]
   }
 ];
+
+//如何遇到children就遍历children，然后挨个添加到一个数组中
+function flatten(JsonTree, arr = []) {
+  for (let i in JsonTree) {
+    if (JsonTree.hasOwnProperty(i)) {
+      if ('children' in JsonTree[i]) {
+        let children = JsonTree[i].children;
+        delete JsonTree[i].children;
+        arr.push(JsonTree[i]);
+        flatten(children, arr);
+      } else {
+        arr.push(JsonTree[i]);
+      }
+    }
+  }
+  // console.log(arr)
+  return arr;
+}
+
+/*function deepTraversal(data) {
+  const result = [];
+  data.forEach(item => {
+    const loop = data => {
+      result.push({
+        id: data.id,
+        name: data.title,
+        pid: data.pid
+      });
+      let child = data.children;
+      if (child) {
+        for (let i = 0; i < child.length; i++) {
+          loop(child[i]);
+        }
+      }
+    };
+    loop(item);
+  });
+  return result;
+}
+
+console.log(deepTraversal(JsonTree));*/
+
 /*function flatten(data) {
   return data.reduce((arr, {id, title, pid, children = []}) =>
     arr.concat([{id, title, pid}], flatten(children)), []);
@@ -32,7 +74,7 @@ let JsonTree = [
     arr.concat([{level, Id, Name, Pid, id}], flatten(children, level+1)), [])
 }*/
 let flatten1 = flatten(JsonTree);
-console.log(flatten1)
+console.log(flatten1);
 
 /*
 output:

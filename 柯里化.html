@@ -20,6 +20,7 @@ function currying(func) {//func是(...args) => args.reduce((a, b) => a + b);
   }
 }
 
+
 const sum = currying(add);
 
 sum(1,2)(3); // 未真正求值

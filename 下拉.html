@@ -6,38 +6,78 @@
 </head>
 <body>
 <script>
+// 如果有孩子 如果孩子都是true 那么父级也应该是true 否则是false 按照此规则处理数据
 let data = [
   {
-    title: 'parent 1',
-    expand: true,
-    children: [
+    "title": "parent 1",
+    "checked": false,
+    "children": [
       {
-        title: 'parent 1-1',
-        expand: true,
-        children: [
+        "title": "parent 1-1",
+        "checked": true,
+        "children": [
           {
-            title: 'leaf 1-1-1'
+            "checked": true,
+            "title": "leaf 1-1-1"
           },
           {
-            title: 'leaf 1-1-2'
+            "checked": true,
+            "title": "leaf 1-1-2"
           }
         ]
       },
       {
-        title: 'parent 1-2',
-        children: [
+        "title": "parent 1-2",
+        "checked": false,
+        "children": [
           {
-            title: 'leaf 1-2-1'
+            "checked": true,
+            "title": "leaf 1-2-1"
           },
           {
-            title: 'leaf 1-2-1'
+            "checked": false,
+            "title": "leaf 1-2-1"
           }
         ]
       }
     ]
   }
 ];
+
 //下面的所有子节点都会被选中
+function isChecked(data, parent = null) {
+  let tempFlagArr = [];
+  for (let i = 0; i < data.length; i++) {
+    let current = data[i];
+    if ("children" in current) {
+      isChecked(current.children, current);
+    } else {
+      tempFlagArr.push(current.checked);
+      parent.checked = tempFlagArr.every(item => item);
+    }
+  }
+  return data;
+}
+/*function isChecked(data) {
+  if (!'children' in data) {
+    return data['checked'];
+  } else {
+    for (let key in data['children']) {
+      if (data['children'].hasOwnProperty(key)) {
+        let i = isChecked(data['children'][i]);
+        if (i) {
+          data['checked'] = true;
+        } else {
+          data['checked'] = false;
+        }
+      }
+    }
+    return data['checked'];
+  }
+}*/
+
+let checked = isChecked(data);
+console.log(checked);
 </script>
 </body>
 </html>

@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/下拉.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/对比两个对象是否相等 值.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/下载.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fibonacci.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json树转扁平.html" beforeDir="false" afterPath="$PROJECT_DIR$/json树转扁平.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sendRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/下拉.html" beforeDir="false" afterPath="$PROJECT_DIR$/下拉.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/对比两个对象是否相等 值.html" beforeDir="false" afterPath="$PROJECT_DIR$/对比两个对象是否相等 值.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/懒加载.html" beforeDir="false" afterPath="$PROJECT_DIR$/懒加载.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/权限.html" beforeDir="false" afterPath="$PROJECT_DIR$/权限.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/柯里化.html" beforeDir="false" afterPath="$PROJECT_DIR$/柯里化.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/深度遍历.html" beforeDir="false" afterPath="$PROJECT_DIR$/深度遍历.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/深拷贝.html" beforeDir="false" afterPath="$PROJECT_DIR$/深拷贝.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,35 +39,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>type</find>
-      <find>yhPay</find>
-      <find>index</find>
-      <find>rule</find>
-      <find>member</find>
-      <find>timer</find>
-      <find>xfdk</find>
-      <find>.xfdk a p</find>
-      <find>1.p</find>
-      <find>agree</find>
-      <find>.xfdk</find>
-      <find>1.</find>
-      <find>$access_url</find>
-      <find>idcard</find>
-      <find>money</find>
-      <find>lr_Moneytext</find>
-      <find>mon</find>
-      <find>set</find>
-      <find>flex_ju</find>
-      <find>navs</find>
-      <find>bga</find>
-      <find>categoryItem</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>oneTreeItem</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -71,15 +57,20 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/echarts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -101,6 +92,10 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -216,7 +211,10 @@
       <workItem from="1564364487195" duration="620000" />
       <workItem from="1564365145482" duration="9102000" />
       <workItem from="1564397498291" duration="3875000" />
-      <workItem from="1564451396805" duration="17392000" />
+      <workItem from="1564451396805" duration="19125000" />
+      <workItem from="1564550074381" duration="18687000" />
+      <workItem from="1564621551047" duration="26000" />
+      <workItem from="1564621606332" duration="16940000" />
     </task>
     <servers />
   </component>
