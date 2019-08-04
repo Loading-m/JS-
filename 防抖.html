@@ -7,11 +7,12 @@
 <body>
 <script>
 var throttle = function (func, delay) {
+  let timer = null;
   return function () {
     var context = this;
     var args = arguments;
-    if (!flatTimer) {
-      flatTimer = setTimeout(function () {
+    if (!timer) {
+      timer = setTimeout(function () {
         func.apply(context, args);
       }, delay);
     }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let arr = [
+  [1, 2, 3, 4, 5],
+  ['a', 'b', 'c', 'd'],
+  ['成功', '失败']
+];
+
+function combineArr(arr) {
+  const length = arr.length - 1;
+  let tmp = [];
+  const totalArray = [];
+
+  function doCombination(arr, current_arr_index = 0) {
+    for (let val of arr[current_arr_index]) {
+      tmp[current_arr_index] = val;
+      if (current_arr_index < length) {
+        doCombination(arr, current_arr_index + 1);//继续调用
+      } else {
+        totalArray.push(tmp);
+      }
+      let oldTmp = tmp;
+      tmp = [];
+      for (let index of oldTmp) {
+        tmp.push(index);
+      }
+    }
+    return totalArray;
+  }
+
+  return doCombination(arr);
+}
+
+//调用方法
+console.log(combineArr(arr));
+</script>
+</body>
+</html>
