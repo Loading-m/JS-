@@ -9,7 +9,8 @@
 let arr = [
   [1, 2, 3, 4, 5],
   ['a', 'b', 'c', 'd'],
-  ['成功', '失败']
+  ['成功', '失败'],
+  ['成功s', '失s败'],
 ];
 
 function combineArr(arr) {
@@ -39,6 +40,32 @@ function combineArr(arr) {
 
 //调用方法
 console.log(combineArr(arr));
+
+
+const textArr = [
+  ['1', '2', '3', '4', '5'],
+  ['a', 'b', 'c', 'd'],
+  ['成功', '失败'],
+  ['成功s', '失s败'],
+];
+const getCombination = (array) => {
+  let resultArray = [];
+  array.forEach((arrItem) => {
+    if (resultArray.length === 0) {
+      resultArray = arrItem;
+    } else {
+      const emptyArray = [];
+      resultArray.forEach((item) => {
+        arrItem.forEach((value) => {
+          emptyArray.push([...item, value]);
+        });
+      });
+      resultArray = emptyArray;
+    }
+  });
+  return resultArray;
+};
+console.log(getCombination(textArr));
 </script>
 </body>
 </html>

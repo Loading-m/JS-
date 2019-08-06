@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bobo课/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bobo课/binarySearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bobo课/binarySearch.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/binarySearch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/binarySearch.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobo课/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/全排列组合.html" beforeDir="false" afterPath="$PROJECT_DIR$/全排列组合.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,7 +62,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -210,7 +216,9 @@
       <workItem from="1564845932286" duration="637000" />
       <workItem from="1564849243123" duration="3507000" />
       <workItem from="1564904831623" duration="11508000" />
-      <workItem from="1564971673328" duration="2476000" />
+      <workItem from="1564971673328" duration="7301000" />
+      <workItem from="1565059674777" duration="111000" />
+      <workItem from="1565059812780" duration="11364000" />
     </task>
     <servers />
   </component>
