@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/合并数组.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/回文.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/文字.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/滑动窗口.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/binarySearch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/binarySearch.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bobo课/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/全排列组合.html" beforeDir="false" afterPath="$PROJECT_DIR$/全排列组合.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +213,22 @@
       <workItem from="1564904831623" duration="11508000" />
       <workItem from="1564971673328" duration="7301000" />
       <workItem from="1565059674777" duration="111000" />
-      <workItem from="1565059812780" duration="11364000" />
+      <workItem from="1565059812780" duration="11570000" />
+      <workItem from="1565080909413" duration="131000" />
+      <workItem from="1565082862199" duration="3102000" />
+      <workItem from="1565142176139" duration="833000" />
+      <workItem from="1565155754328" duration="45000" />
+      <workItem from="1565155824600" duration="719000" />
+      <workItem from="1565182094732" duration="629000" />
+      <workItem from="1565249855053" duration="152000" />
+      <workItem from="1565317666768" duration="507000" />
+      <workItem from="1565330074823" duration="570000" />
+      <workItem from="1565330892542" duration="96000" />
+      <workItem from="1565333731688" duration="26000" />
+      <workItem from="1565500502682" duration="55000" />
+      <workItem from="1565598436426" duration="58000" />
+      <workItem from="1565603343161" duration="2431000" />
+      <workItem from="1565614693090" duration="1312000" />
     </task>
     <servers />
   </component>

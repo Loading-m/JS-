@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas width="200px" height="200px"></canvas>
+<script>
+let canvas = document.getElementsByTagName('canvas')[0];
+let ctx = canvas.getContext('2d');
+ctx.font = '60px serif';
+let text = '好好';
+let m = ctx.measureText(text);
+let h = m.actualBoundingBoxAscent - m.actualBoundingBoxDescent;
+let w = m.width;
+ctx.fillText(text, 100 - w / 2, 100 + h / 2);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function merge(arr1, arr2) {
+  let res = [];
+  let index = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    if (i % 2) {
+      res.push(arr1[i]);
+      res.push(arr2[index]);
+      index++;
+    } else {
+      res.push(arr1[i]);
+    }
+  }
+  return res;
+}
+
+const s1 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2'];
+const s2 = ['A', 'B', 'C', 'D'];
+console.log(merge(s1, s2));
+</script>
+</body>
+</html>
