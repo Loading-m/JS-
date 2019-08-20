@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>await</title>
+  <script src="polyfill.js"></script>
+</head>
+<body>
+<script>
+function ajaxOne() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('我是第一个ajax的结果');
+    }, 2000);
+  });
+}
+
+function ajaxTwo(resultOne) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('第二个ajax使用第一个ajax的结果->' + resultOne);
+    }, 1000);
+  });
+}
+
+function ajaxThree() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('第三个ajax的结果');
+    }, 500);
+  });
+}
+
+async function ajaxAwait() {
+  const result1 = await ajaxOne();
+  console.log(result1);
+  const result2 = await ajaxTwo(result1);
+  console.log(result2);
+  const result3 = await ajaxThree();
+  console.log(result3);
+  console.log('我是同步代码');
+}
+
+ajaxAwait();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>promise</title>
+</head>
+<body>
+<script>
+function ajaxOne() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('ajax结束');
+    }, 1000);
+  });
+}
+
+ajaxOne().then(function (resultOne) {
+  console.log(resultOne);
+}).then(function () {
+  console.log('同步代码');
+});
+
+</script>
+</body>
+</html>

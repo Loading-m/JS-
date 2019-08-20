@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/合并数组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/回文.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/文字.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/滑动窗口.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/await.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polyfill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +30,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1OfN2LUcAwmDI5vKQd4UK9zI3Xb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,7 +53,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bobo课" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -61,11 +68,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\bobo课" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\echarts" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\正则" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\数组" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,7 +238,24 @@
       <workItem from="1565500502682" duration="55000" />
       <workItem from="1565598436426" duration="58000" />
       <workItem from="1565603343161" duration="2431000" />
-      <workItem from="1565614693090" duration="1312000" />
+      <workItem from="1565614693090" duration="2050000" />
+      <workItem from="1565657716569" duration="13340000" />
+      <workItem from="1565685700249" duration="2585000" />
+      <workItem from="1565744185906" duration="37604000" />
+      <workItem from="1565793623206" duration="68000" />
+      <workItem from="1565831057435" duration="31143000" />
+      <workItem from="1565919555493" duration="3000" />
+      <workItem from="1565919620356" duration="18935000" />
+      <workItem from="1566008677607" duration="937000" />
+      <workItem from="1566175457104" duration="502000" />
+      <workItem from="1566175987838" duration="144000" />
+      <workItem from="1566176160600" duration="175000" />
+      <workItem from="1566178377312" duration="7160000" />
+      <workItem from="1566263133756" duration="937000" />
+      <workItem from="1566282341930" duration="61000" />
+      <workItem from="1566284925224" duration="215000" />
+      <workItem from="1566291147620" duration="27000" />
+      <workItem from="1566303205622" duration="3108000" />
     </task>
     <servers />
   </component>

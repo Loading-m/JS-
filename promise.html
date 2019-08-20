@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>promise</title>
+</head>
+<body>
+<script>
+function ajaxOne() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('我是第一个ajax的结果');
+    }, 1000);
+  });
+}
+
+function ajaxTwo(resultOne) {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('第二个ajax使用第一个ajax的结果->' + resultOne);
+    }, 1000);
+  });
+}
+
+function ajaxThree() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve('第三个ajax的结果');
+    }, 1500);
+  });
+}
+
+ajaxOne().then(function (resultOne) {
+  return resultOne;
+}).then(function (resultOne) {
+  console.log(resultOne);//第一个的结果
+  ajaxTwo(resultOne).then(function (resultTwo) {
+    return resultTwo;
+  }).then(function (TwoResult) {
+    console.log(TwoResult);//第二个的结果
+    ajaxThree().then(function (finalResult) {
+      console.log(finalResult);//第三个结果
+    }).then(function () {
+      console.log('我是同步代码');
+    });
+  });
+});
+
+</script>
+</body>
+</html>
