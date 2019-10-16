@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/await.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promise.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promise2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Canvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ZHI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/canvas/tool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/canvaslz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/canvas绘制雷达图.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/仪表盘.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则/正则.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/深度广度优先遍历.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/红黄蓝.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/回文.html" beforeDir="false" afterPath="$PROJECT_DIR$/回文.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,12 +80,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\bobo课" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\echarts" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\bobo课" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\正则" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\数组" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
     </key>
   </component>
@@ -89,6 +101,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="手写map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JS基础/手写map.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.手写map.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
@@ -255,7 +277,41 @@
       <workItem from="1566282341930" duration="61000" />
       <workItem from="1566284925224" duration="215000" />
       <workItem from="1566291147620" duration="27000" />
-      <workItem from="1566303205622" duration="3108000" />
+      <workItem from="1566303205622" duration="3337000" />
+      <workItem from="1566349394228" duration="244000" />
+      <workItem from="1567065618541" duration="109000" />
+      <workItem from="1567156055484" duration="52000" />
+      <workItem from="1567241249062" duration="134000" />
+      <workItem from="1567392298366" duration="819000" />
+      <workItem from="1567514107451" duration="1237000" />
+      <workItem from="1567558930753" duration="15000" />
+      <workItem from="1567558983975" duration="54000" />
+      <workItem from="1567849817820" duration="381000" />
+      <workItem from="1568031197919" duration="3026000" />
+      <workItem from="1568077430520" duration="5000" />
+      <workItem from="1568688019131" duration="639000" />
+      <workItem from="1568691334475" duration="4397000" />
+      <workItem from="1568876956231" duration="371000" />
+      <workItem from="1568882415348" duration="758000" />
+      <workItem from="1568942829862" duration="18000" />
+      <workItem from="1568964965279" duration="10000" />
+      <workItem from="1569118252474" duration="356000" />
+      <workItem from="1569134200380" duration="522000" />
+      <workItem from="1569324136124" duration="12000" />
+      <workItem from="1569324781206" duration="43000" />
+      <workItem from="1569335242870" duration="3705000" />
+      <workItem from="1569485370975" duration="2376000" />
+      <workItem from="1569489086213" duration="68000" />
+      <workItem from="1570078823943" duration="454000" />
+      <workItem from="1570340478012" duration="5309000" />
+      <workItem from="1570504850763" duration="2728000" />
+      <workItem from="1570517859310" duration="2243000" />
+      <workItem from="1570585050765" duration="5815000" />
+      <workItem from="1570608027362" duration="4000" />
+      <workItem from="1570755791217" duration="2146000" />
+      <workItem from="1570762113230" duration="86000" />
+      <workItem from="1571194882010" duration="1420000" />
+      <workItem from="1571209802667" duration="91000" />
     </task>
     <servers />
   </component>

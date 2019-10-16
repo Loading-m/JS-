@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <style>
+    .canvas {
+      position: fixed;
+      width: 30px;
+      height: 210px;
+      left: -2px;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  (切换到移动端)可在屏幕左侧边缘向右拉动
+  <canvas id="canvas" class="canvas" :style="style" width="30" height="210"></canvas>
+</div>
+<script>
+var vm = new Vue({
+  el: '#app',
+  data: {
+    x: 0,
+    y: 0,
+    show: false,
+    context: null
+  },
+  computed: {
+    // 样式计算属性
+    style() {
+      return {
+        top: this.y - 100 + 'px', // 跟随上下移动 减去原始高度
+        display: this.show ? 'block' : 'none'
+      };
+    }
+  },
+  mounted() {
+    let canvas = document.getElementById('canvas');
+    this.context = canvas.getContext('2d');
+    window.addEventListener('touchstart', this.touchstart);
+    window.addEventListener('touchmove', this.touchmove);
+    window.addEventListener('touchend', this.touchend);
+  },
+  methods: {
+    // 获取坐标
+    getXY(event) {
+      let touch = event.touches[0];
+      this.x = touch.clientX;
+      this.y = touch.clientY;
+    },
+    touchstart(event) {
+      this.getXY(event);
+      // 判断是否是边缘滑动
+      if (this.x < 30) {
+        this.show = true;
+        this.render();
+      } else {
+        this.show = false;
+      }
+    },
+    touchmove(event) {
+      this.getXY(event);
+      this.render();
+    },
+    touchend() {
+      // 判断停止时的位置偏移
+      if (this.x > 90 && this.show) {
+        // alert('滑动结束');
+      }
+      this.x = 0;
+      this.show = false;
+    },
+    render() {
+      let x = this.x / 3;
+      if (x > 25) {
+        x = 25;
+      }
+      // 透明度计算
+      let opacity = x / 25;
+      let color = `rgba(30,30,30,${opacity})`;
+
+      // 清空画布
+      this.context.clearRect(0, 0, 30, 210);//清除画布
+      this.context.fillStyle = color;
+      this.context.beginPath();
+      this.context.moveTo(0, 0);
+      // 三次贝塞尔曲线,划出弧度
+      this.context.bezierCurveTo(5, 70, x, 70, x, 100);  //0，0起始坐标  5,70第一个控制点，x,70第二个控制点，x,100第三个控制点
+      this.context.moveTo(x, 100);//移动到一半的距离继续画贝塞尔线
+      this.context.bezierCurveTo(x, 140, 5, 140, 0, 210);
+      this.context.lineTo(0, 0);//闭合曲线
+      this.context.fill();//填充模式
+      this.context.strokeStyle = '#fff';
+      this.context.stroke();//绘制路径
+    }
+  }
+});
+</script>
+</body>
+</html>

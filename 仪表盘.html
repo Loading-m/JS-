@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="canvas"  width="800" height="800"/>
+<script>
+const trackW = 6;
+const rx = 500;
+const ry = 500;
+const radius = 400;
+const innerLineW = 20;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+function draw(toAngle, currentAngle = Math.PI) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // 半圆轨道
+  ctx.beginPath();
+  ctx.strokeStyle = '#ad80fc';
+  ctx.lineWidth = trackW;
+  ctx.arc(rx, ry, radius, Math.PI, 0, false);
+  ctx.stroke();
+  // 圆弧
+  ctx.beginPath();
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = '#fe4d55';
+  ctx.lineWidth = innerLineW;
+  ctx.arc(rx, ry, radius, Math.PI, currentAngle, false);
+  ctx.stroke();
+  if (currentAngle < toAngle) {
+    currentAngle += 0.02;
+    if (currentAngle > toAngle) currentAngle = toAngle;
+    requestAnimationFrame(() => {
+      draw(toAngle, currentAngle);
+    });
+  }
+}
+
+draw(1.5 * Math.PI);
+</script>
+</body>
+</html>

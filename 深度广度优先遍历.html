@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>深度优先遍历</title>
+</head>
+<body>
+<script>
+const data = [{
+  "name": "广东",
+  "id": 1,
+  "children": [{
+    "name": "深圳",
+    "id": 2,
+    "children": [{"name": "南山区", "id": 3}, {"name": "福田区", "id": 4}, {"name": "宝安区", "id": 5}]
+  }, {
+    "name": "广州",
+    "id": 6,
+    "children": [{"name": "天河区", "id": 7}, {"name": "番禺区", "id": 8}, {"name": "海珠区", "id": 9}]
+  }]
+}];
+
+function bfs(target, name) {
+  const queue = [...target];
+  do {
+    const current = queue.shift(); // 取出队列第一个元素
+    current.isTravel = true; // 标记为遍历过
+    if (current.children) {
+      queue.push(...current.children); // 子元追加到队列后面
+    }
+    if (current.name === name) {
+      return current;
+    }
+  } while (queue.length);
+  return undefined;
+}
+
+function dfsWhile(target, name) {
+  const queue = [...target];
+  do {
+    const current = queue.pop(); // 改成pop，取最后一个，后入先出
+    current.isTravel = true;
+    if (current.children) {
+      queue.push(...[...current.children].reverse()); // 保证从左到右遍历
+    }
+    if (current.name === name) {
+      return current;
+    }
+  } while (queue.length);
+  return undefined;
+}
+
+
+// console.log(bfs(data, '广东'));
+console.log(dfsUp(data, '番禺区'));
+
+function dfsUp(target = [], name) {
+  return target.find(x => {
+    x.isTravel = true;
+    const isFind = x.name === name;
+    console.log('自下而上', x);
+    return isFind ? x : dfsDown(x.children, name);
+  });
+}
+
+// => 广东、深圳、南山区、福田区
+
+// 自下而上
+function dfsDown(target = [], name) {
+  return target.find(x => {
+    x.isTravel = true;
+    const isFind = x.name === name;
+    const ret = isFind ? x : dfsDown(x.children, name);
+    console.log('自下而上', x);
+    return ret;
+  });
+}
+
+</script>
+</body>
+</html>
