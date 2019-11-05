@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ZHI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas/tool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvaslz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/echarts/canvas绘制雷达图/canvas绘制雷达图.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flip.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/仪表盘.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/正则/正则.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/深度广度优先遍历.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/红黄蓝.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Compose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bind.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mapa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数组乱序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/记忆函数 memoize.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/回文.html" beforeDir="false" afterPath="$PROJECT_DIR$/回文.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -312,6 +301,17 @@
       <workItem from="1570762113230" duration="86000" />
       <workItem from="1571194882010" duration="1420000" />
       <workItem from="1571209802667" duration="91000" />
+      <workItem from="1571227281563" duration="355000" />
+      <workItem from="1571650348219" duration="646000" />
+      <workItem from="1571707492968" duration="25000" />
+      <workItem from="1571965765817" duration="918000" />
+      <workItem from="1571967988363" duration="382000" />
+      <workItem from="1571968717625" duration="1439000" />
+      <workItem from="1571978910979" duration="8000" />
+      <workItem from="1572248874520" duration="1968000" />
+      <workItem from="1572590257990" duration="9000" />
+      <workItem from="1572838549045" duration="807000" />
+      <workItem from="1572919368031" duration="5808000" />
     </task>
     <servers />
   </component>

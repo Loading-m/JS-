@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let memoize = function (fn) {
+  let cache = {};
+  return function (...args) {
+    let ket = JSON.stringify(args);
+    if (!cache.hasOwnProperty(key)) {
+      cache[key] = fn.apply(this, args);
+    }
+    return cache[key];
+  };
+};
+</script>
+</body>
+</html>

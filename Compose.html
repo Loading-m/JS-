@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function compose(...fns) {
+  return function (x) {
+    return fns.reduceRight(function (arg, fn) {
+      return fn(arg);
+    }, x);
+  };
+}
+</script>
+</body>
+</html>
