@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Compose.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bind.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组乱序.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/记忆函数 memoize.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/Compose.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/小球.html" beforeDir="false" />
     </list>
+    <list id="bd368362-c507-41ce-92ad-704bb1ee0103" name="d" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +109,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="" />
+      <changelist id="bd368362-c507-41ce-92ad-704bb1ee0103" name="d" comment="" />
       <created>1552206159050</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -311,7 +310,11 @@
       <workItem from="1572248874520" duration="1968000" />
       <workItem from="1572590257990" duration="9000" />
       <workItem from="1572838549045" duration="807000" />
-      <workItem from="1572919368031" duration="5808000" />
+      <workItem from="1572919368031" duration="8083000" />
+      <workItem from="1572939479946" duration="4568000" />
+      <workItem from="1572957790777" duration="2824000" />
+      <workItem from="1573003330519" duration="9349000" />
+      <workItem from="1573088981844" duration="15087000" />
     </task>
     <servers />
   </component>

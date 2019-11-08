@@ -13,6 +13,20 @@ function compose(...fns) {
     }, x);
   };
 }
+
+const str = '123';
+
+function stringToUpper(str) {
+  return str.toUpperCase();
+}
+
+function stringReverse(str) {
+  return str.split('').reverse().join('');
+}
+
+let upper = compose(stringReverse, stringToUpper);
+let result = upper(str);
+console.log(result);
 </script>
 </body>
 </html>
