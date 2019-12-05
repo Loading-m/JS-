@@ -6,8 +6,12 @@
 </head>
 <body>
 <script>
-const arr = ['A', 'B', 'C', 'B', 'C',];
+const arr = ['A', 'B', 'C', 'B', 'C', 'A', 'B'];
 const map = {};
+
+
+
+
 for (let i = 0; i < arr.length; i++) {
   let current = arr[i];
   if (!map[current]) {
@@ -17,7 +21,10 @@ for (let i = 0; i < arr.length; i++) {
       firstIndex: i
     };
   } else {
-    arr[map[current].firstIndex] = current + '-' + 1;
+    if (map[current].firstIndex || map[current].firstIndex === 0) {
+      arr[map[current].firstIndex] = current + '-' + 1;
+      map[current].firstIndex = false;
+    }
     map[current].count = map[current].count + 1;
     arr[i] = current + '-' + map[current].count;
   }

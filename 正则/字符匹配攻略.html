@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+//模糊匹配
+const reg = /hello/;
+console.log(reg.test("hello"));
+//横向模糊匹配
+const regex = /ab{2,5}c/g;
+const string = "abc abbc abbbc abbbbc abbbbbc";
+console.log(string.match(regex));
+//{n,m} 表示最少n次 最多m次
+//纵向模糊匹配
+const regx = /a[123]b/g;
+const strings = "a0b a2b a4b";
+console.log(string.match(regx));
+
+//字符组 表示匹配其中一个字符
+//[bcd] 可以是bcd之一
+
+//范围表示法
+const reg2 = /[1-6a-fG-M]/; //表示123456abcdef很多字符
+
+//-连字符有特殊用途 如果要匹配-则不能直接这么写
+//可以把-不放到中间或者将-转义 [a\-z]
+
+//排除字符组用法
+//^在第一位表示取反{除了什么}
+const reg3 = /[^abc]/; //除了abc以外的都可以
+
+//  \d表示匹配一个数字   \D表示除了数字以外的字符
+//  \w表示匹配数字大小写字母和下划线
+//  \W 表示非单词字符
+//  \s表示空白符 包括空格 水平制表符 垂直制表符 换行符  回车符 换页符
+//  \S 表示非空白符
+//  . 表示通配符 表示几乎任意字符   s能匹配到的除外
+
+
+//量词
+// {m,} 表示至少出现m次
+// {m} 等价{m,m} 表示出现m次
+// ？ 等价{0,1} 表示可以出现也可以不出现
+// + 表示至少出现一次 等价{1,}
+// * 表示出现任意次也可能不出现 等价{0,}
+
+//贪婪模式惰性匹配
+
+const regxs = /\d{2,5}/g;
+const string3 = "123 456 7894";
+//尽可能多的匹配
+
+//非贪婪模式
+const regexss = /\d{2,5}?/g;
+//意思是当2个够了的时候就不再往下尝试了
+
+//总结: 通过在量词后面加个问号就能实现惰性匹配
+
+//多选分支
+const reg4 = /good|nice/;
+const string5 = "good idea nice try";
+string.match(reg4);
+// ["good","nice"]
+
+//分支结构也是惰性的 前面的匹配上了后面就不再匹配了
+
+const hex = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/g;
+const string34 = "#ffbbad #fc01DF #HZ75484";
+console.log(string34.match(hex));
+
+const time = "23:59";
+const times = "02:07";
+const timeRegx = /^(0?[0-9]|1[0-9]|[2][0-3]):(0?[0-9]|[1-5][0-9])$/;
+console.log(time.match(timeRegx));
+
+const regxss = /\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])/;
+
+const regxsss = /id="[^"]*"/;
+const div = `<div id="container"></div>`;
+console.log(div.match(regxsss));
+
+let result = "hello".replace(/^|$/g, '#');
+console.log(result);
+
+// const result = "hello".replace(/(?=l)/g, "#");
+//?表示某个字符前面的位置  ？=l 就代表l前面全匹配到
+
+const re = "hello".replace(/(?!l)/g, "#");
+console.log(re);
+
+var regesx = /(\d{4})-(\d{2})-(\d{2})/;
+const stringsssss = "2015-08-25";
+console.log(stringsssss.match(regesx));
+console.log(RegExp.$3)
+</script>
+</body>
+</html>
