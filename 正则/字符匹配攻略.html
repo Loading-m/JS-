@@ -93,8 +93,24 @@ console.log(re);
 
 var regesx = /(\d{4})-(\d{2})-(\d{2})/;
 const stringsssss = "2015-08-25";
-console.log(stringsssss.match(regesx));
-console.log(RegExp.$3)
+// console.log(stringsssss.match(regesx));
+// console.log(RegExp.$3)
+
+
+const final = stringsssss.replace(regesx, function () {
+  return RegExp.$2 + '/';
+});
+console.log(final);
+
+console.log("  foo ".replace(/^\s+|\s+$/g, ''));
+
+function titleize (str) {
+  return str.toLowerCase().replace(/(^|\s)\w/g, function (c) {
+    return c.toUpperCase();
+  });
+}
+console.log(titleize('my name is epeli'));
+console.log(/<\/[^>]+/.test("<title>regular expression</title>"))
 </script>
 </body>
 </html>
