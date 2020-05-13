@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+var obj = {
+  "a": {
+    "b": {
+      "c": {
+        "d": 1
+      }
+    }
+  },
+  "aa": 2,
+  "cc": 3,
+  "dd": 4,
+  "ee": 5,
+  "c": [
+    1,
+    2
+  ]
+};
+
+function convert(obj) {
+  let str = '', res = {};
+  const inner = (obj) => {
+    const keys = Object.keys(obj);
+    keys.forEach((item) => {
+      const type = Object.prototype.toString.call(obj[item]).slice(8, -1);
+      if (type === 'Object') {
+        str += item + '.';
+        inner(obj[item], str, res);
+      } else if (type === 'Array') {
+        obj[item].forEach((items, index) => {
+          const key = `${item}[${index}]`;
+          res[key] = items;
+        });
+      } else {
+        str += item;
+        res[str] = obj[item];
+        str = '';
+      }
+    });
+    return res;
+  };
+  return inner(obj);
+}
+
+console.log(convert(obj));
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+var arr = [1, 2, 3];
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var permute = function (nums) {
+  const solution = [];
+  permuteHelper(nums, solution);
+  return solution;
+};
+
+function permuteHelper(input, solution, path = [], used = []) {
+  if (path.length === input.length) {
+    solution.push(path.slice(0));
+    return;
+  }
+  for (let i = 0; i < input.length; i++) {
+    if (!used[i]) {
+      used[i] = true;
+      path.push(input[i]);
+      permuteHelper(input, solution, path, used);
+      used[i] = false;
+      path.pop();
+    }
+  }
+}
+
+permute(arr);
+</script>
+</body>
+</html>

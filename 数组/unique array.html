@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+
+function unique(arr) {
+  let slow = 1;
+  for (let fast = 1; fast < arr.length; fast++) {
+    if (arr[fast] === arr[slow - 1]) {
+      continue;
+    }
+    arr[slow++] = arr[fast];
+  }
+  return arr.slice(0, slow);
+}
+
+console.log(unique(arr));
+</script>
+</body>
+</html>

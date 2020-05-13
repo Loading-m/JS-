@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>邀请卡</title>
+  <link rel="stylesheet" href="wechat_v2.css">
+  <link rel="stylesheet" href="swiper.min.css">
+  <script src="vue.js"></script>
+  <script src="swiper.min.js"></script>
+  <script src="zepto.js"></script>
+  <script src="qrcode.js"></script>
+  <script src="html2canvas.min.js"></script>
+</head>
+<body>
+<div id="app" v-cloak="">
+  <div id="backHome" class="back-home-header flex flex-item-center">
+    <div class="flex flex-item-center flex-aro header">
+      <div class="flex flex-row flex-center" onclick="urlTo('/wechat/mainv2/index')">
+        <img src="http://h5.dongjinyu.com/icon/20200117151925_5e215ffd6b7b5.jpg" style="display: block;" width="15"
+             height="15" class="round">
+        <span class="title font12">返回首页</span>
+      </div>
+      <div @click="showQr=true" class="flex flex-row flex-center flex-item-center">
+        <span class="font12">关注我们 > </span>
+        <img src="http://h5.dongjinyu.com/icon/20200117151925_5e215ffd6b7b5.jpg" width="20" height="20">
+      </div>
+    </div>
+    <!--qr弹窗-->
+    <div v-show="showQr" class="qr">
+      <div class="bg flex flex-col" :style="{paddingBottom:paddingBottom+'px'}">
+        <div class="box flex flex-col">
+          <div class="close" @click="showQr=false">
+            <c>x</c>
+          </div>
+          <div class="font14 text">
+            长按识别二维码关注公众号<br />
+            及时收到课程提醒和活动福利
+          </div>
+          <div>
+            <img src="http://h5.dongjinyu.com/icon/20200117151925_5e215ffd6b7b5.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="invitation_card">
+    <div class="txt-black font15 txt-bold flex flex-item-center flex-center tip">长按保存图片 分享好友或朋友圈</div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper scroll-box">
+        <template v-for="(card,index) of cards" :key="index">
+          <div class="swiper-slide" v-if="!card.lightPoint"><!--是否是亮点-->
+            <div class="box relative-container" v-if="!card.posterImgUrl">
+              <img :src="card.background" class="radius10" v-on:load="completed(index)"><!--确保资源图片加载完毕-->
+              <div class="info absolute-container">
+                <div class="flex flex-col flex-item-center">
+                  <div class="user-info marb5">
+                    <img :src="icon">
+                  </div>
+                  <div class="font15 txt-black marb5">{{nickname}}</div>
+                  <div class="flex flex-item-center flex-aro page-tip marb20">
+                    <div class="flex-one marr5 line"></div>
+                    <div class="txt-gray font12">{{card.inviteText}}</div>
+                    <div class="flex-one marl5 line"></div>
+                  </div>
+                  <div class="txt-black txt-bold font15 marb20">{{card.importantText}}</div>
+                  <div class="txt-gray font12 marb20">{{card.liveTime}}</div>
+                  <div class="course-img marb5 flex-one">
+                    <img src="http://h5.dongjinyu.com/icon/20200117151832_5e215fc802439.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="absolute-container qrBox flex flex-item-center flex-center">
+                <div class="qrcode"></div>
+              </div>
+            </div>
+            <img :src="card.posterImgUrl" v-if="card.posterImgUrl" class="wid100 hei100 ps">
+          </div>
+          <div class="swiper-slide" v-else>
+            <div class="box relative-container" v-if="!card.posterImgUrl">
+              <img :src="card.background" class="radius10" v-on:load="completed(index)">
+              <div class="info absolute-container">
+                <div class="flex flex-col">
+                  <div class="flex flex-item-center flex-start marb20 marl5">
+                    <div class="user-info marr12">
+                      <img :src="icon">
+                    </div>
+                    <div class="flex flex-col flex-item-start flex-aro" style="height: 60px;">
+                      <div class="font15 txt-black marb5">{{nickname}}</div>
+                      <div class="txt-gray font12">{{card.inviteText}}</div>
+                    </div>
+                  </div>
+                  <div class="course-img marb20 marl5 marr5 flex-one">
+                    <img src="http://h5.dongjinyu.com/icon/20200117151832_5e215fc802439.jpg">
+                  </div>
+                  <div class="flex flex-item-center marl5 marr5 marb10">
+                    <div class="black-box marr5"></div>
+                    <div class="txt-black txt-bold font15">课程亮点</div>
+                  </div>
+                  <div class="txt-black font15 marb20 context flex-one">{{card.importantText}}</div>
+                  <div class="divider-line wid100 marb10"></div>
+                  <div class="txt-gray font12 marb10 text-center">{{card.liveTime}}</div>
+                </div>
+              </div>
+              <div class="absolute-container qrBox flex flex-item-center flex-center">
+                <div class="qrcode"></div>
+              </div>
+            </div>
+            <img :src="card.posterImgUrl" v-if="card.posterImgUrl" class="wid100 hei100 ps">
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+var vm = new Vue({
+    el: '#app',
+    data: {
+      showQr: false,
+      paddingBottom: 140,
+      readyCount: 0,//加载完成的图片数量
+      allReady: false,//是否全部加载完毕
+      icon: "http://h5.dongjinyu.com/icon/20200117151925_5e215ffd6b7b5.jpg",
+      nickname: "王馆长",
+      cards: [
+        {
+          background: 'http://h5.dongjinyu.com/icon/20200425154044_5ea3e97c2fa0b.jpg',
+          inviteText: '邀请您一起来学习',
+          importantText: '哈哈哈哈哈哈',
+          liveTime: '直播时间：2019年10月25日 10：00',
+          posterImgUrl: '',
+        },
+        {
+          background: 'http://h5.dongjinyu.com/icon/20200425152206_5ea3e51e2cacf.jpg',
+          inviteText: '邀请您一起来学习',
+          importantText: '哈哈哈哈哈哈',
+          liveTime: '直播时间：2019年10月25日 10：00',
+          posterImgUrl: '',
+        },
+        {
+          background: 'http://h5.dongjinyu.com/icon/20200506135721_5eb251c170111.jpg',
+          inviteText: '邀请您一起来学习',
+          importantText: '哈哈哈哈哈哈',
+          liveTime: '直播时间：2019年10月25日 10：00',
+          posterImgUrl: '',
+        },
+        {
+          background: 'http://h5.dongjinyu.com/icon/20200425154905_5ea3eb719ed3a.jpg',
+          importantText: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+          inviteText: '发现一节好课邀请您一起来学习',
+          posterImgUrl: '',
+        },
+        {
+          background: 'http://h5.dongjinyu.com/icon/20200506142611_5eb258837b134.png',
+          posterImgUrl: '',
+          inviteText: '发现一节好课邀请您一起来学习',
+          importantText: '可编辑大纲',
+          liveTime: '直播时间：2019年10月25日 10：00',
+          lightPoint: true,
+        },
+      ]
+    },
+    mounted: function () {
+      var self = this;
+      this.$nextTick(function () {
+        self.initData();
+      });
+    },
+    watch: {
+      allReady: function (val) {
+        var self = this;
+        if (val) {
+          var timer = setInterval(() => { //为了确保和dom渲染后的时间重叠，防止延迟所以使用定时每0.5秒获取一次全部海报是否都已经成功渲染了页面上
+            var dom = document.querySelectorAll(".ps");
+            if (dom.length === self.cards.length) { //如果都渲染好了就初始化swiper
+              setTimeout(function () {
+                self.$nextTick(() => {
+                  self.initSwiper();
+                  self.timed = true;//防止任务队列中的其他interval任务多调用initSwiper 所以加上标识
+                  self.rmPrevent();//解除禁止滑动
+                });
+              }, 20);
+              clearInterval(timer);
+            }
+          }, 500);
+        }
+      }
+    },
+    methods: {
+      prevent: function () {
+        var self = this;
+        self.pv = function (e) {
+          e.preventDefault();
+        };
+        document.addEventListener('touchstart', self.pv, {passive: false});
+      },
+      rmPrevent: function () {
+        var self = this;
+        document.removeEventListener('touchstart', self.pv, false);
+      },
+      completed: function (index) {
+        var self = this;
+        self.readyCount++;
+        if (self.readyCount === self.cards.length) {
+          self.allReady = true;
+        }
+        self.generateShareContent(index);
+      },
+      generateShareContent: function (index) {
+        var self = this;
+        var shareContent = $(".scroll-box").children(".swiper-slide")[index];
+        self.takeAction(shareContent, index);
+      },
+      initData: function () {
+        var self = this;
+        self.prevent();
+        self.bindQRCode();
+      },
+      initSwiper: function () {
+        var self = this;
+        if (self.timed) return;
+        var mySwiper = new Swiper('.swiper-container', {
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          effect: 'coverflow',
+          grabCursor: true,
+          watchSlidesProgress: true,
+          coverflow: {
+            rotate: 30,
+            stretch: 0,
+            depth: 30,
+            modifier: 6,
+            slideShadows: false//是否阴影
+          },
+        });
+      },
+      // 内容生成二维码
+      bindQRCode: function () {
+        var dom = document.querySelectorAll(".qrcode");
+        for (var i = 0; i < dom.length; i++) {
+          var qrcode = new QRCode(dom[i], {
+            text: "这真是美好的一天啊",
+            width: 50,
+            height: 50,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+          });
+        }
+      },
+      takeAction: function (content, index) {
+        var self = this;
+        if (!this.cards[index].posterImgUrl) {
+          this.takeScreenshot(content, index);
+        }
+      },
+// 页面生成图片
+      takeScreenshot: function (content, index) {
+        var self = this;
+        setTimeout(function () {
+          var shareContent = content;
+          var width = shareContent.offsetWidth;
+          var height = shareContent.scrollHeight;
+          var canvas = document.createElement("canvas");
+          var context = canvas.getContext("2d");
+          var scale = self.getPixelRatio(context);
+          canvas.width = width * scale; //设置放大倍数,保证清晰度
+          canvas.height = height * scale; //设置放大倍数,保证清晰度
+          canvas.style.width = width + "px";
+          canvas.style.height = height + "px";
+          context.scale(scale, scale); //设置放大倍数与上面的宽高对应
+          var rect = shareContent.getBoundingClientRect(); //获取元素相对于视察的偏移量
+          context.translate(-rect.left, -rect.top); //设置context位置，值为相对于视窗的偏移量负值，让图片复位
+          html2canvas(shareContent, {
+            useCORS: true, //使用跨域(如果有跨域的话必须必须必须带着!)
+            background: "#fff",
+            width: width,
+            height: height,
+            canvas: canvas,
+            scale: scale,
+            onrendered: function (canvas) {
+              var dataURL = canvas.toDataURL();
+              self.cards[index].posterImgUrl = dataURL;
+            },
+          }, 0);
+        });
+      }
+      ,
+//获取像素密度
+      getPixelRatio: function (context) {
+        var backingStore =
+          context.backingStorePixelRatio ||
+          context.webkitBackingStorePixelRatio ||
+          context.mozBackingStorePixelRatio ||
+          context.msBackingStorePixelRatio ||
+          context.oBackingStorePixelRatio ||
+          context.backingStorePixelRatio ||
+          1;
+        return (window.devicePixelRatio || 2) / backingStore;
+      }
+      ,
+    }
+  })
+;
+</script>

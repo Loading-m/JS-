@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>旋转的箭头</title>
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<canvas id="canvas" width="400" height="400">
+  不支持
+</canvas>
+<script src="../utils.js"></script>
+<script src="../ball.js"></script>
+<script>
+window.onload = function () {
+  var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    mouse = utils.captureMouse(canvas),
+    spring = 0.03,
+    friction = 0.9,
+    gravity = 1,
+    balls = [],
+    numBalls = 5;
+  while (numBalls--) {
+    balls.push(new Ball(10, Math.random() * 0xffffff));
+  }
+
+  function draw(ballB, i) {
+    if (i === 0) {
+      move(ballB, mouse.x, mouse.y);
+      context.moveTo(mouse.x, mouse.y);
+    } else {
+      var ballA = balls[i - 1];
+      move(ballB, ballA.x, ballA.y);
+      context.moveTo(ballA.x, ballA.y);
+      context.quadraticCurveTo(mouse.x, mouse.y, ballB.x, ballB.y);
+    }
+    // context.lineTo(ballB.x, ballB.y);
+    context.quadraticCurveTo(ballB.x, ballB.y, ballB.x, ballB.y);
+    context.stroke();
+    ballB.draw(context);
+  }
+
+  function move(ball, targetX, targetY) {
+    ball.vx += (targetX - ball.x) * spring;//ax
+    ball.vy += (targetY - ball.y) * spring;//ay
+    ball.vy += gravity;
+    ball.vx *= friction;//摩擦力
+    ball.vy *= friction;
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+  }
+
+  (function drawFrame() {
+    window.requestAnimationFrame(drawFrame);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
+    balls.forEach(draw);
+  }());
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+const industry_list = [
+  {
+    "parent_ind": "女装",
+    "name": "连衣裙"
+  },
+  {
+    "name": "女装"
+  },
+  {
+    "parent_ind": "女装",
+    "name": "半身裙"
+  },
+  {
+    "parent_ind": "女装",
+    "name": "A字裙"
+  },
+  {
+    "name": "数码"
+  },
+  {
+    "parent_ind": "数码",
+    "name": "电脑配件"
+  },
+  {
+    "parent_ind": "电脑配件",
+    "name": "内存"
+  },
+];
+
+/*
+{
+  "数码": {
+    "电脑配件": {
+        "内存" : {}
+     }
+  },
+  "女装" : {
+     "连衣裙": {},
+    "半身裙": {},
+    "A字裙": {}
+  }
+}
+*/
+function convert_format(data) {
+  const res = {};
+  const map = data.reduce((res, v) => (res[v.name] = v, res), {});
+  for (const item of data) {
+    if (!item.parent_ind) {
+      res[item.name] = {};
+    }
+  }
+  for (const item of data) {
+    if (item.parent_ind in map) {
+      if (map[item.parent_ind].parent_ind) {
+        const path = dfs(item.name);
+        let re = res[path[0]];
+        for (let i = 1; i < path.length; i++) {
+          if (i === path.length - 1) {
+            re[path[i]] = {};
+          } else {
+            re = re[path[i]];
+          }
+        }
+      } else {
+        res[item.parent_ind][item.name] = {};
+      }
+    }
+  }
+  return res;
+
+
+  function dfs(name) {
+    let path = [];
+    const inner = (name, path) => {
+      path.unshift(name);
+      if (!map[name].parent_ind) {
+        return;
+      }
+      inner(map[name].parent_ind, path);
+    };
+    inner(name, path);
+    return path;
+  }
+}
+
+
+const result = convert_format(industry_list);
+console.log(result);
+</script>
+</body>
+</html>

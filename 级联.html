@@ -14,13 +14,13 @@ const transObject = function (tableData, keys) {
       let key = keys[j], filed = tableData[i][key];
       if (!cur[filed]) {
         let pusher = {
-          value: filed
+          value: filed//浙江
         }, tmp;
-        if (j !== (keys.length - 1)) {
+        if (j !== (keys.length - 1)) {//不是name时
           tmp = [];
-          pusher.children = tmp;
+          pusher.children = tmp;//浙江的children为【】
         }
-        cur[filed] = {$$pos: arr.push(pusher) - 1};
+        cur[filed] = {$$pos: arr.push(pusher) - 1};//存hash
         cur = cur[filed];
         arr = tmp;
       } else {
@@ -29,6 +29,7 @@ const transObject = function (tableData, keys) {
       }
     }
   }
+  console.log(hashTable)
   return res;
 };
 const data = [{

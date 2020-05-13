@@ -14,22 +14,16 @@ let arr = [
 ];
 
 function combineArr(arr) {
-  const length = arr.length - 1;
-  let tmp = [];
+  const length = arr.length - 1;//3,
   const totalArray = [];
 
-  function doCombination(arr, current_arr_index = 0) {
+  function doCombination(arr, current_arr_index = 0,tmp =[]) {
     for (let val of arr[current_arr_index]) {
       tmp[current_arr_index] = val;
       if (current_arr_index < length) {
-        doCombination(arr, current_arr_index + 1);//继续调用
+        doCombination(arr, current_arr_index + 1,tmp);//继续调用
       } else {
-        totalArray.push(tmp);
-      }
-      let oldTmp = tmp;
-      tmp = [];
-      for (let index of oldTmp) {
-        tmp.push(index);
+        totalArray.push(tmp.slice(0));
       }
     }
     return totalArray;
@@ -42,30 +36,6 @@ function combineArr(arr) {
 console.log(combineArr(arr));
 
 
-const textArr = [
-  ['1', '2', '3', '4', '5'],
-  ['a', 'b', 'c', 'd'],
-  ['成功', '失败'],
-  ['成功s', '失s败'],
-];
-const getCombination = (array) => {
-  let resultArray = [];
-  array.forEach((arrItem) => {
-    if (resultArray.length === 0) {
-      resultArray = arrItem;
-    } else {
-      const emptyArray = [];
-      resultArray.forEach((item) => {
-        arrItem.forEach((value) => {
-          emptyArray.push([...item, value]);
-        });
-      });
-      resultArray = emptyArray;
-    }
-  });
-  return resultArray;
-};
-console.log(getCombination(textArr));
 </script>
 </body>
 </html>

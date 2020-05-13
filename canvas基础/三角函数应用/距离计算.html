@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>旋转的箭头</title>
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<canvas id="canvas" width="400" height="400">
+  不支持
+</canvas>
+<script src="../utils.js"></script>
+<script>
+window.onload = function () {
+  var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    mouse = utils.captureMouse(canvas),
+    rect = {x: canvas.width / 2, y: canvas.height / 2};
+  (function drawFrame() {
+    window.requestAnimationFrame(drawFrame);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    var dx = rect.x - mouse.x,
+      dy = rect.y - mouse.y,
+      dist = Math.sqrt(dx * dx + dy * dy);
+    context.fillStyle = '#000000';
+    context.fillRect(rect.x - 2, rect.y - 2, 4, 4);
+    //划线
+    context.beginPath();
+    context.moveTo(rect.x, rect.y);
+    context.lineTo(mouse.x, mouse.y);
+    context.closePath();
+    context.stroke();
+    console.log(dist);
+  }());
+};
+/*
+*
+* 正弦曲线公式：y = A sin(Bx + C) + D
+A 控制振幅，A 值越大，波峰和波谷越大，A 值越小，波峰和波谷越小；
+B 值会影响周期，B 值越大，那么周期越短，B 值越小，周期越长。
+C 值会影响图像左右移动，C 值为正数，图像左移，C 值为负数，图像右移。
+D 值控制上下移动。
+* https://www.desmos.com/calculator/sa6pki00id
+*/
+</script>
+</body>
+</html>

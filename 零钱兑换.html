@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+const sol = [];
+const coin = [25, 10, 5, 1];
+
+function findCombination(money_remain = 50, level = 0, sol) {
+  if (level === coin.length - 1) {
+    sol[level] = money_remain;
+  }
+  for (let i = 0; i <= money_remain / coin[level]; i++) {
+    sol[level] = i;
+    findCombination(money_remain - coin[level] * i, level + 1, sol);
+  }
+}
+
+findCombination(50, 0, sol);
+console.log(sol);
+</script>
+</body>
+</html>

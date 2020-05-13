@@ -6,32 +6,56 @@
 </head>
 <body>
 <script>
-const query = (url) => {
-  const queryObj = Object.create(null);
-  if (typeof url !== 'string') {
-    throw new Error('传入的不是字符串');
+function getQuery(queryString) {
+  if (typeof queryString !== 'string') {
+    throw new Error('传入的不是query字符串');
   }
-  if(url.includes('&')){
-    let queryArr = url.split('&');//[id=111,name=li]
-    if(Array.isArray(queryArr)){
-      queryArr.forEach(item => {
-        let key_value = item.split('=');
-        if (Array.isArray(key_value)) {
-          let key = key_value[0];
-          queryObj[key] = Symbol(key_value[1]);
+  let queryJSON = {};
+  if (queryString.indexOf('?') > -1) {
+    queryString = queryString.split('?')[1];
+  } else {
+    return queryJSON; //如果没有参数返回空对象
+  }
+  if (queryString.indexOf('&') > -1) {
+    queryString = queryString.split('&');
+  }
+  if (!Array.isArray(queryString)) {
+    //如果只有一个参数就把用？分割后的字符串变成数组以便后续的遍历操作 比如只有一个参数的的时候queryString为[id=111]
+    queryString = [queryString];
+  }
+  for (let i = 0; i < queryString.length; i++) {
+    if (queryString[i].indexOf('=') > -1) {
+      let splited = queryString[i].split('=');
+      let key = splited[0];
+      let value = splited[1];
+      if (queryJSON[key] !== undefined) { //处理重复的参数转换为数组的操作
+        if (Array.isArray(queryJSON[key])) {
+          queryJSON[key].push(value);
+        } else {
+          queryJSON[key] = [queryJSON[key], value];
         }
-      });
-    }
-  }else{
-    let key_value = url.split('=');
-    if (Array.isArray(key_value)) {
-      queryObj[key_value[0]] = key_value[1];
+      } else {
+        queryJSON[key] = value; //只有一个参数
+      }
+    } else {
+      throw new TypeError('传入的参数不正确(=)');
     }
   }
-  return queryObj;
-};
-let obj = query('id=111&css=222');
-console.log(obj.id);
+  return function (key) { //使用闭包缓存queryJSON的结果，防止每次取值重复执行上面的解析操作 提升效率
+    if (!key) { //如果不传key直接返回整个对象
+     return queryJSON;
+    }
+    if (queryJSON[key] !== undefined) {
+      return queryJSON[key];
+    } else { //如果不存在直接返回undefined
+      return undefined;
+    }
+  };
+}
+
+let query = getQuery('http://www.baidu.com?id=111&css=222&id=2223&id=4322223'); //返回的query为闭包函数
+console.log(query('id')); // [111,2223,4322223]
+console.log(query('css')); // [222]
 </script>
 </body>
 </html>

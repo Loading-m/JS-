@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>、
+<div>原始数据输入区域：</div>
+<textarea id="text" style="height: 400px;width: 100%">
+  子乐科技 3.15星期日
+    ——————————
+     专注国产热销品牌🥇
+     渠道正品售后无忧
+    ——————————
+           【小米全系列】
+————————————
+
+          【特价机器】
+小米8SE 4+64G黑-900
+小米5S  4+128 金-900
+————————————
+Note8 4+64 黑篮白-1000
+Note8 6+64 黑蓝白-1080
+Note8 6+128黑篮白-1230
+Note8pro 6+64黑绿白-1000
+Note8pro 6+128黑绿白-1000
+Note8pro 8+128黑绿白-1490
+Note8pro 8+256黑绿白-1690
+K30 6+128 红蓝紫-1680
+K30 8+128 红蓝紫-1820
+K30 8+256 红蓝紫-2030
+K30 5G 6+128红蓝紫-2170
+K30 5G 8+128红蓝紫-2420
+K30 5G 8+256蓝色-2650
+黑鲨2 全系列  私聊 为准
+小米CC9 6+128黑篮-1620
+小米CC9 6+128白色-1670
+小米CC9 美图定制版-2000
+小米CC9E 6+64黑篮白 电讯
+小米CC9E 6+128黑篮白-1000
+CC9pro 8+128白绿-2520
+CC9pro 8+128黑色-2600
+CC9pro 8+256黑白绿-2820
+小米9 全系列  电讯
+小米9pro 8+256黑白-3680
+小米9pro 12+512黑白-4250
+小米10 8+128G 黑-000
+小米10 8+128G 金-4070
+小米10 8+128G 蓝-4070
+小米10 8+256G 黑-000
+小米10 8+256G 金-4310
+小米10 8+256G 蓝-4340
+小米10 12+256G黑-4750
+小米10 12+256G金-4740
+小米10 12+256G蓝-4740
+米10pro 8+256G蓝-5150
+米10pro 8+256G 白-5150
+米10pro12+256   蓝-5570
+米10pro12+256   白-5520
+米10pro12+512   白-5970
+米10pro 12+512  蓝-5970
+    ——————————-
+</textarea>
+<div>
+  <input type="text" value="50" placeholder="请输入统一提价或减价金额" id="number">
+  <button id="btn">提价</button>
+  <button id="btn2">降价</button>
+</div>
+转换结果区域:
+<textarea id="final" style="height: 400px;width: 100%"></textarea>
+
+<script>
+document.getElementById('btn').onclick = function () {
+  var value = document.getElementById('text').value;
+  document.getElementById('final').value = '';
+  var price = document.getElementById('number').value;
+  var result = value.replace(/(.+-)(\d+)$/gm, function (match, g1, g2) {
+    g2 = parseInt(g2) + parseInt(price);
+    return g1 + g2;
+  });
+  document.getElementById('final').value = result;
+  document.getElementById('final').focus();
+  copyText(document.getElementById('final').value, function () {
+    alert('复制结果成功');
+  });
+};
+document.getElementById('btn2').onclick = function () {
+  var value = document.getElementById('text').value;
+  var price = document.getElementById('number').value;
+  document.getElementById('final').value = '';
+  var result = value.replace(/(.+-)(\d+)$/gm, function (match, g1, g2) {
+    g2 = parseInt(g2) - parseInt(price);
+    if (g2 <= 0) {
+      g2 = 0;
+    }
+    return g1 + g2;
+  });
+  document.getElementById('final').value = result;
+  document.getElementById('final').focus();
+  copyText(document.getElementById('final').value, function () {
+    alert('复制结果成功');
+  });
+};
+
+function copyText(text, callback) { // text: 要复制的内容， callback: 回调
+  var tag = document.createElement('textarea');
+  tag.setAttribute('id', 'cp_hgz_input');
+  tag.value = text;
+  document.getElementsByTagName('body')[0].appendChild(tag);
+  document.getElementById('cp_hgz_input').select();
+  document.execCommand('copy');
+  document.getElementById('cp_hgz_input').remove();
+  if (callback) {
+    callback();
+  }
+}
+</script>
+</body>
+</html>

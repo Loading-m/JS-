@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+function combine(arr) {
+  arr.sort((a, b) => {
+    return a - b;
+  });
+  arr = Array.of(...new Set(arr));
+  console.log('原数组:' + arr);
+  const result = [];
+  let fast = 0;
+  while (fast < arr.length) {
+    let begin = fast;
+    let prev = arr[begin];
+    while (fast < arr.length && arr[fast + 1] - prev === 1) {
+      fast++;
+      prev = arr[fast];
+    }
+    if (fast - begin === 0) {
+      result.push([arr[fast]]);
+    } else {
+      result.push([arr.slice(begin, fast + 1)]);
+    }
+    fast++;
+  }
+  return result;
+}
+
+const arr = [];
+for (let i = 0; i <= 11; i++) {
+  arr[i] = Math.random() * 20 | 0;
+}
+console.log(combine(arr));
+</script>
+</body>
+</html>

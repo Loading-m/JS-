@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>旋转的箭头</title>
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<canvas id="canvas" width="1366" height="564">
+  不支持
+</canvas>
+<script src="../utils.js"></script>
+<script src="../ball.js"></script>
+<script>
+window.onload = function () {
+  var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    ball = new Ball(),
+    vx = 0,
+    vy = 0,
+    ax = 0,
+    ay = 0,
+    gravity = 0.05,
+    aup = -0.055;
+  ball.x = canvas.width / 2;
+  ball.y = canvas.height;
+  window.addEventListener('keydown', function (e) {
+    switch (e.keyCode) {
+      case 37:
+        ax = -0.1;
+        break;
+      case 39:
+        ax = 0.1;
+        break;
+      case 38:
+        ay = -0.1;
+        break;
+      case 40:
+        ay = 0.1;
+        break;
+    }
+  }, false);
+  window.addEventListener('keyup', function () {
+    ax = 0;
+    ay = 0;
+  }, false)
+  (function drawFrame() {
+    window.requestAnimationFrame(drawFrame);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    vx += ax;
+    vy += ay;
+    vy += gravity;
+    vy += aup;
+    ball.x += vx;
+    ball.y += vy;
+    ball.draw(context);
+  }());
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>旋转的箭头</title>
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<canvas id="canvas" width="400" height="400">
+  不支持
+</canvas>
+<script src="../utils.js"></script>
+<script src="../arrow.js"></script>
+<script>
+window.onload = function () {
+  var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    mouse = utils.captureMouse(canvas),
+    arrow = new Arrow(),
+    vr = 2;//度数
+  arrow.x = canvas.width / 2;
+  arrow.y = canvas.height / 2;
+  (function drawFrame() {
+    window.requestAnimationFrame(drawFrame);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    arrow.rotation += vr * Math.PI / 180;//转换成弧度
+    arrow.draw(context);
+  }());
+};
+
+</script>
+</body>
+</html>
