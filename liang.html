@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let str = 'tirmAndTransform,， tirmAndTransform  tirmAndTransform, tirmAndTransform';
+
+function replaceKeyWord(str) {
+  let newStr = '';
+  let fast = 0;
+  while (fast < str.length) {
+    if (str[fast] === ',' || str[fast] === '，' || str[fast] === ' ') {
+      while (str[fast] === ',' || str[fast] === '，' || str[fast] === ' ') {
+        fast++;
+      }
+      newStr += ',';
+    } else {
+      newStr += str[fast++];
+    }
+  }
+  return newStr;
+}
+
+console.time('计时');
+const result = replaceKeyWord(str);
+console.timeEnd('计时');
+console.log(result);
+</script>
+</body>
+</html>

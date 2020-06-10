@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<canvas width="300" height="170" id="myCanvas">不支持</canvas>
+<script>
+const total = 80000;//总的
+const cur = 40000; //当前用了多少
+const L = total - cur; //剩余
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext('2d');
+//画外周半圆环
+ctx.strokeStyle = "rgb(189,225,238)";
+ctx.lineCap = "round";
+ctx.lineWidth = 15;
+ctx.beginPath();
+ctx.arc(150, 150, 100, Math.PI, 2 * Math.PI);
+ctx.stroke();
+
+//画大汉字 40000
+ctx.font = "38px 微软雅黑";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
+ctx.fillStyle = 'rgb(66,128,201)';
+const width = ctx.measureText(L).width;
+ctx.fillText(L, canvas.width / 2 - 5,
+  125);
+
+//画L汉字
+ctx.font = "18px 微软雅黑";
+ctx.textBaseline = "top";
+ctx.fillText("L", width / 2 + canvas.width / 2,
+  120);
+
+//画剩余使用流量
+ctx.font = "12px 微软雅黑";
+ctx.fillStyle = '#000000';
+ctx.fillText("当前滤芯剩余使用流量", canvas.width / 2,
+  145);
+
+//画总流量
+ctx.textAlign = "right";
+ctx.font = "12px 微软雅黑";
+ctx.fillStyle = 'rgb(66,128,201)';
+ctx.fillText(total, canvas.width,
+  130);
+ctx.fillStyle = '#000000';
+ctx.fillText("总流量", 300,
+  145);
+
+//画百分比进度条
+let percent = cur / total * 100;
+console.log(percent);
+if (percent > 100) {
+  percent = 100;
+}
+const rad = Math.PI / 100; //180°分为100份
+ctx.strokeStyle = "rgb(66,128,201)";
+ctx.beginPath();
+ctx.arc(150, 150, 100, Math.PI, Math.PI + percent * rad);
+ctx.stroke();
+ctx.save();
+
+//画百分比字
+ctx.beginPath();
+let x = canvas.width / 2 + Math.cos(Math.PI + percent * rad) * 100; //100为圆半径
+let y = 150 + Math.sin(Math.PI + percent * rad) * 100;
+ctx.fillText(percent.toFixed(1) + "%", x + 40, y - 15);
+</script>
+</body>
+</html>

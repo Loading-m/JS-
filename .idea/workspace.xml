@@ -2,64 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="正则">
-      <change afterPath="$PROJECT_DIR$/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M的N个数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/arrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/ball.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/万有引力/粒子.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/arrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/ball.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/rotate-to-mouse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/rotate-to-mouse2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/平滑上下运动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/曲线.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/三角函数应用/距离计算.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/关节/01-segment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/关节/Segment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/关节/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/弹动/一维坐标的弹动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/弹动/三个控制点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/弹动/弹簧.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/弹动/弹簧两个.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/弹动/链式弹动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/渲染/坐标旋转.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/缓动/交互.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/轨道运动/轨道.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/边界/摩擦力.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/边界/碰撞检测.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/边界/边界碰撞.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/运动/x位移.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/运动/加速度.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/运动/速度向量.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/运动/飞船.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/canvas基础/鼠标交互/交互.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/convert_format.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objflatten.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/request.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swiper_html2canvas/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/triangle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/全排列.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/和为M的N个数.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/对比数组值是否相等.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/数组/unique array.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/零钱兑换.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/canvas/progress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/ani.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/spirit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liang.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/mapa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query.html" beforeDir="false" afterPath="$PROJECT_DIR$/query.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trim.html" beforeDir="false" afterPath="$PROJECT_DIR$/trim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/交集.html" beforeDir="false" afterPath="$PROJECT_DIR$/交集.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/全排列组合.html" beforeDir="false" afterPath="$PROJECT_DIR$/全排列组合.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/扁平转json树.html" beforeDir="false" afterPath="$PROJECT_DIR$/扁平转json树.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/找出字符串中连续出现最多的字符.html" beforeDir="false" afterPath="$PROJECT_DIR$/找出字符串中连续出现最多的字符.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/红黄蓝.html" beforeDir="false" afterPath="$PROJECT_DIR$/红黄蓝.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/级联.html" beforeDir="false" afterPath="$PROJECT_DIR$/级联.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/记忆函数 memoize.html" beforeDir="false" afterPath="$PROJECT_DIR$/记忆函数 memoize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flip.html" beforeDir="false" afterPath="$PROJECT_DIR$/flip.html" afterDir="false" />
     </list>
     <list id="bd368362-c507-41ce-92ad-704bb1ee0103" name="d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +64,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/canvas基础/关节" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -130,18 +78,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\关节" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\轨道运动" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\万有引力" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\弹动" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\swiper_html2canvas\static" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\渲染" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\css" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\关节" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\轨道运动" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\万有引力" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础" />
     </key>
   </component>
   <component name="RunManager">
@@ -477,7 +425,17 @@
       <workItem from="1589298523816" duration="751000" />
       <workItem from="1589331549273" duration="1462000" />
       <workItem from="1589333439182" duration="6085000" />
-      <workItem from="1589350004975" duration="319000" />
+      <workItem from="1589350004975" duration="567000" />
+      <workItem from="1589434955841" duration="1649000" />
+      <workItem from="1589444883741" duration="2816000" />
+      <workItem from="1589448267796" duration="531000" />
+      <workItem from="1589763953231" duration="685000" />
+      <workItem from="1589764799237" duration="233000" />
+      <workItem from="1591247154644" duration="903000" />
+      <workItem from="1591252301606" duration="616000" />
+      <workItem from="1591336777909" duration="225000" />
+      <workItem from="1591760044709" duration="723000" />
+      <workItem from="1591765974952" duration="5569000" />
     </task>
     <task id="LOCAL-00001" summary="正则">
       <created>1575526879016</created>
@@ -521,9 +479,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="202" y="2" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584436570402" />
-    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588834093647">
+    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591247429485">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588834093647" />
+    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591247429485" />
   </component>
 </project>
