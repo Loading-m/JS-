@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  {{obj.name}}
+  {{obj.age}}
+  {{obj.sex}}
+  <button @click="setSex">不使用$set设置性别</button>
+  <button @click="setSexAuto">使用$set设置性别</button>
+</div>
+<script>
+new Vue({
+  el: '#app',
+  data() {
+    return {
+      obj: {
+        name: '张三',
+        age: 22
+      }
+    };
+  },
+  methods: {
+    setSex() {
+      this.obj.sex = '男';
+      this.obj.__ob__.dep.notify(); //手动向依赖发送变化通知
+    },
+    setSexAuto() {
+      this.$set(this.obj, 'sex', '男');
+    }
+  }
+});
+</script>
+</body>
+</html>

@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d09ccf7-0d9c-4f29-a336-511da1354245" name="Default Changelist" comment="正则">
-      <change afterPath="$PROJECT_DIR$/canvas/progress.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/ani.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/spirit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/25.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refreshIcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sku.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sku/AdjMatrix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sku/SpecAdjoinMatrix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sku/sku.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/正则/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/阶乘.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flip.html" beforeDir="false" afterPath="$PROJECT_DIR$/flip.html" afterDir="false" />
     </list>
     <list id="bd368362-c507-41ce-92ad-704bb1ee0103" name="d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JS基础" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,11 +50,11 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -64,7 +67,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sku" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -78,18 +81,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\sku" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\css" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\关节" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\轨道运动" />
+      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\万有引力" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\swiper_html2canvas\static" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\渲染" />
       <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\css" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\关节" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\轨道运动" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础\万有引力" />
-      <recent name="C:\Users\Luo\WebstormProjects\JS基础\canvas基础" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,18 +104,6 @@
         <item itemvalue="JavaScript Debug.手写map.html" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
@@ -435,7 +426,25 @@
       <workItem from="1591252301606" duration="616000" />
       <workItem from="1591336777909" duration="225000" />
       <workItem from="1591760044709" duration="723000" />
-      <workItem from="1591765974952" duration="5569000" />
+      <workItem from="1591765974952" duration="6282000" />
+      <workItem from="1591774582481" duration="25000" />
+      <workItem from="1591842777955" duration="9000" />
+      <workItem from="1591929305059" duration="784000" />
+      <workItem from="1591942655013" duration="10000" />
+      <workItem from="1592027489646" duration="2227000" />
+      <workItem from="1592039031594" duration="238000" />
+      <workItem from="1592048346103" duration="242000" />
+      <workItem from="1592126597166" duration="5508000" />
+      <workItem from="1592191807296" duration="623000" />
+      <workItem from="1592275189667" duration="1098000" />
+      <workItem from="1592276474085" duration="39000" />
+      <workItem from="1592298036881" duration="7000" />
+      <workItem from="1592298232878" duration="394000" />
+      <workItem from="1592373228949" duration="792000" />
+      <workItem from="1593607994567" duration="583000" />
+      <workItem from="1593681809023" duration="26000" />
+      <workItem from="1593931217413" duration="16000" />
+      <workItem from="1593931510171" duration="9648000" />
     </task>
     <task id="LOCAL-00001" summary="正则">
       <created>1575526879016</created>
@@ -448,7 +457,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
@@ -458,30 +467,33 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="正则" />
     <option name="LAST_COMMIT_MESSAGE" value="正则" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="409" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1584436413568">
+    <state x="760" y="153" key="FileChooserDialogImpl" timestamp="1593681824420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="409" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1584436413568" />
-    <state x="202" y="2" key="SettingsEditor" timestamp="1584436570402">
+    <state x="760" y="153" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593681824420" />
+    <state x="91" y="107" width="1182" height="544" key="dock-window-1" timestamp="1592126636906">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="202" y="2" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584436570402" />
-    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591247429485">
+    <state x="91" y="107" width="1182" height="544" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1592126636906" />
+    <state x="-24" y="102" width="1182" height="544" key="dock-window-2" timestamp="1592126636906">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591247429485" />
+    <state x="-24" y="102" width="1182" height="544" key="dock-window-2/0.0.1366.728@0.0.1366.728" timestamp="1592126636906" />
+    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593948278924">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="640" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593948278924" />
   </component>
 </project>

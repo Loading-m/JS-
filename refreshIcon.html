@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      background: #00a0e9;
+      height: 2000px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    svg.icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .arrow {
+      stroke-dasharray: 4573, 4573;
+      stroke-dashoffset: 4573;
+    }
+
+    .circle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 1px 2px 2px #939091;
+      transform: rotateZ(107deg);
+    }
+  </style>
+</head>
+<body>
+<div class="circle">
+  <svg t="1592132006540" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+       p-id="7205" width="200" height="200">
+    <path
+      class="arrow"
+      d="M0 512h93.090909a418.909091 418.909091 0 1 0 418.909091-418.909091V0c282.763636 0 512 229.236364 512 512s-229.236364 512-512 512S0 794.763636 0 512z"
+      p-id="7206"></path>
+  </svg>
+</div>
+<script>
+var path = document.querySelector('path');
+var length = path.getTotalLength();
+console.log(length);
+</script>
+</body>
+</html>

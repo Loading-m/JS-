@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    .flex-container {
+      display: flex;
+      width: 40%;
+      height: 50px;
+      margin: 0 auto;
+    }
+
+    .left-box {
+      background: red;
+      flex: 1;
+      overflow: hidden;
+      min-width: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 50px;
+    }
+
+    .right-box {
+      background: gray;
+      padding: 0 20px;
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="flex-container">
+  <div class="left-box">dsadasdsajdasnncxzczmmm,czxczzcxzcxzcx</div>
+  <div class="right-box">25</div>
+</div>
+<div class="flex-container">
+  <div class="left-box">dsadasdsajdasnncxzczmmm,czxczzcxzcxzcx</div>
+  <div class="right-box">0</div>
+</div>
+</body>
+</html>
